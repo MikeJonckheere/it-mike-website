@@ -185,9 +185,9 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
 </nav>
 <section id="hero">
   <div class="hero-left">
-    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Ardooie &mdash; West-Vlaanderen</div>
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span><span id="cms-hero-location">Ardooie &mdash; West-Vlaanderen</span></div>
     <h1 class="hero-title">IT die<br/><em>gewoon werkt.</em><br/>Altijd.</h1>
-    <p class="hero-sub">Van snelle helpdesk tot serverbeheer en IT-consultancy &mdash; voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.</p>
+    <p class="hero-sub" id="cms-hero-sub">Van snelle helpdesk tot serverbeheer en IT-consultancy &mdash; voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.</p>
     <div class="hero-actions">
       <a href="tel:+32496797671" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.4 2.83 2 2 0 012.39.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>04 96 79 76 71</a>
       <a href="https://wa.me/+32496797671" target="_blank" rel="noopener" class="btn-secondary"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
@@ -241,8 +241,7 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
 <section id="over">
   <div class="over-img-side reveal">
     <div class="over-img-card">
-      <!-- Vervang door jouw foto: <img src="fotos/mike.jpg" alt="Mike Jonckheere"/> -->
-      <div style="width:100%;height:100%;background:linear-gradient(135deg,#152a52 0%,#0d1f3c 100%);display:flex;align-items:center;justify-content:center;">
+      <div id="cms-profile-img" style="width:100%;height:100%;background:linear-gradient(135deg,#152a52 0%,#0d1f3c 100%);display:flex;align-items:center;justify-content:center;">
         <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(0,200,150,.3)" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
       </div>
     </div>
@@ -254,8 +253,8 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
   <div class="over-content reveal" style="transition-delay:.15s">
     <div class="section-tag">Wie ben ik</div>
     <h2 class="section-title">Persoonlijke IT,<br/><em>zonder gedoe.</em></h2>
-    <p class="over-text">Ik ben <strong>Mike Jonckheere</strong>, oprichter van IT-Mike. Met jarenlange ervaring in IT-support, serverbeheer en consultancy help ik particulieren en bedrijven om hun IT vlot en veilig te laten werken.</p>
-    <p class="over-text">Geen callcenter, geen wachtrijen &mdash; gewoon <strong>direct contact</strong> met de persoon die het oplost. Snel, duidelijk en zonder technisch jargon.</p>
+    <p class="over-text" id="cms-about-1">Ik ben <strong>Mike Jonckheere</strong>, oprichter van IT-Mike. Met jarenlange ervaring in IT-support, serverbeheer en consultancy help ik particulieren en bedrijven om hun IT vlot en veilig te laten werken.</p>
+    <p class="over-text" id="cms-about-2">Geen callcenter, geen wachtrijen &mdash; gewoon <strong>direct contact</strong> met de persoon die het oplost. Snel, duidelijk en zonder technisch jargon.</p>
     <div class="over-checks">
       <div class="over-check"><div class="over-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Snel ter plaatse of remote</div>
       <div class="over-check"><div class="over-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Duidelijke communicatie, geen jargon</div>
@@ -273,9 +272,9 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
   <h2 class="contact-title reveal">Probleem? <em>Bel me.</em><br/>Vraag? <em>Bel me.</em></h2>
   <p class="contact-sub reveal">Ik reageer snel en kom graag langs voor een vrijblijvend gesprek.</p>
   <div class="contact-cards reveal">
-    <a href="tel:+32496797671" class="contact-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.4 2.83 2 2 0 012.39.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><div class="contact-card-label">Bel me</div><div class="contact-card-val">04 96 79 76 71</div></a>
+    <a href="tel:+32496797671" class="contact-card" id="cms-phone-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.4 2.83 2 2 0 012.39.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><div class="contact-card-label">Bel me</div><div class="contact-card-val" id="cms-phone-val">04 96 79 76 71</div></a>
     <a href="https://wa.me/+32496797671" target="_blank" rel="noopener" class="contact-card wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><div class="contact-card-label">WhatsApp</div><div class="contact-card-val">Stuur een bericht</div></a>
-    <a href="mailto:info@it-mike.be" class="contact-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg><div class="contact-card-label">E-mail</div><div class="contact-card-val">info@it-mike.be</div></a>
+    <a href="mailto:info@it-mike.be" class="contact-card" id="cms-email-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg><div class="contact-card-label">E-mail</div><div class="contact-card-val" id="cms-email-val">info@it-mike.be</div></a>
   </div>
 </section>
 <div class="gdpr-bar">&#x1F512; Geen cookies &middot; Statistieken via <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Web Analytics</a> (GDPR-conform) &nbsp;|&nbsp; <a href="mailto:info@it-mike.be">info@it-mike.be</a> &nbsp;|&nbsp; BTW BE0780.671.242</div>
@@ -292,6 +291,35 @@ document.getElementById("mobileClose").addEventListener("click",()=>document.get
 document.querySelectorAll(".mobile-link").forEach(l=>l.addEventListener("click",()=>document.getElementById("mobileMenu").classList.remove("open")));
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}}),{threshold:.1});
 document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+</script>
+<script>
+// Laad bewerkbare content vanuit Decap CMS (content/site.json)
+fetch("/content/site.json").then(function(r){return r.json();}).then(function(d){
+  if(d.hero_location){document.getElementById("cms-hero-location").textContent=d.hero_location;}
+  if(d.hero_subtitle){document.getElementById("cms-hero-sub").textContent=d.hero_subtitle;}
+  if(d.about_1){document.getElementById("cms-about-1").textContent=d.about_1;}
+  if(d.about_2){document.getElementById("cms-about-2").textContent=d.about_2;}
+  if(d.contact_phone){
+    var tel=d.contact_phone;
+    var disp=tel.replace(/^\+32/,"0").replace(/(\d{4})(\d{2})(\d{2})(\d{2})/,"$1 $2 $3 $4");
+    document.getElementById("cms-phone-val").textContent=disp;
+    document.getElementById("cms-phone-link").href="tel:"+tel;
+  }
+  if(d.contact_email){
+    document.getElementById("cms-email-val").textContent=d.contact_email;
+    document.getElementById("cms-email-link").href="mailto:"+d.contact_email;
+  }
+  if(d.profile_photo){
+    var el=document.getElementById("cms-profile-img");
+    var img=document.createElement("img");
+    img.src=d.profile_photo;
+    img.alt="Mike Jonckheere";
+    img.style.cssText="width:100%;height:100%;object-fit:cover;object-position:center 20%";
+    el.innerHTML="";
+    el.style="";
+    el.appendChild(img);
+  }
+}).catch(function(){});
 </script>
 </body>
 </html>

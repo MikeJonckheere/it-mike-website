@@ -1,0 +1,56 @@
+backend:
+  name: github
+  repo: MikeJonckheere/it-mike-website
+  branch: main
+  base_url: https://it-mike.be
+  auth_endpoint: api/auth
+
+# Waar foto's worden opgeslagen na upload via CMS
+media_folder: "fotos"
+public_folder: "fotos"
+
+# Taal
+locale: "nl"
+
+collections:
+  - name: "website"
+    label: "Website inhoud"
+    files:
+
+      - name: "home"
+        label: "Teksten & Foto's"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "📍 Locatie (hero)"
+            name: "hero_location"
+            widget: "string"
+            hint: "Bijv: Ardooie — West-Vlaanderen"
+
+          - label: "📝 Hero subtekst"
+            name: "hero_subtitle"
+            widget: "text"
+            hint: "De tekst onder de hoofdtitel in het hero blok"
+
+          - label: "👤 Over mij — alinea 1"
+            name: "about_1"
+            widget: "text"
+
+          - label: "👤 Over mij — alinea 2"
+            name: "about_2"
+            widget: "text"
+
+          - label: "📞 Telefoonnummer"
+            name: "contact_phone"
+            widget: "string"
+            hint: "Formaat: +32496797671"
+
+          - label: "✉️ E-mailadres"
+            name: "contact_email"
+            widget: "string"
+
+          - label: "🖼️ Profielfoto"
+            name: "profile_photo"
+            widget: "image"
+            required: false
+            hint: "Upload een foto van jezelf (optioneel)"
