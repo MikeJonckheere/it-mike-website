@@ -9,6 +9,8 @@
 <meta name="author" content="Mike Jonckheere — IT-Mike"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://it-mike.be/"/>
+<link rel="icon" type="image/png" href="/media/Favicon.png"/>
+<link rel="apple-touch-icon" href="/media/Favicon.png"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://it-mike.be/"/>
 <meta property="og:title" content="IT-Mike — IT-support &amp; Consultancy"/>
@@ -165,19 +167,23 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
   .nav-hamburger{display:flex}
   .diensten-grid{grid-template-columns:1fr}
 }
+.nav-logo-img{height:36px;width:auto;mix-blend-mode:multiply;display:block}
+.footer-logo-img{height:28px;width:auto;mix-blend-mode:multiply;display:block}
+.mobile-menu .nav-logo-img{height:48px}
+.over-img-card video{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 </style>
 </head>
 <body>
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" id="mobileClose">&#x2715;</button>
+  <img src="/media/Logo%20with%20slogan.png" alt="IT-Mike" class="nav-logo-img" style="height:48px;margin-bottom:.5rem"/>
   <a href="#diensten" class="mobile-link">Diensten</a>
   <a href="#over" class="mobile-link">Over IT-Mike</a>
   <a href="#contact" class="mobile-link">Contact</a>
 </div>
 <nav id="navbar">
   <a href="#" class="nav-logo" aria-label="IT-Mike homepage">
-    <div class="nav-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-    <span class="nav-logo-text">IT<span>-Mike</span></span>
+    <img src="/media/Logo%20with%20slogan.png" alt="IT-Mike — IT makes sense" class="nav-logo-img"/>
   </a>
   <ul class="nav-links"><li><a href="#diensten">Diensten</a></li><li><a href="#over">Over mij</a></li><li><a href="#contact">Contact</a></li></ul>
   <a href="tel:+32496797671" class="nav-cta">Bel nu</a>
@@ -241,9 +247,9 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
 <section id="over">
   <div class="over-img-side reveal">
     <div class="over-img-card">
-      <div id="cms-profile-img" style="width:100%;height:100%;background:linear-gradient(135deg,#152a52 0%,#0d1f3c 100%);display:flex;align-items:center;justify-content:center;">
-        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(0,200,150,.3)" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-      </div>
+      <video id="cms-profile-img" autoplay muted playsinline preload="auto">
+        <source src="/media/Contact%20Mike.webm" type="video/webm"/>
+      </video>
     </div>
     <div class="over-img-badge">
       <div class="over-img-badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -279,7 +285,9 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
 </section>
 <div class="gdpr-bar">&#x1F512; Geen cookies &middot; Statistieken via <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Web Analytics</a> (GDPR-conform) &nbsp;|&nbsp; <a href="mailto:info@it-mike.be">info@it-mike.be</a> &nbsp;|&nbsp; BTW BE0780.671.242</div>
 <footer>
-  <div class="footer-logo-wrap"><div class="footer-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><span class="footer-logo-text">IT<span>-Mike</span></span></div>
+  <div class="footer-logo-wrap">
+    <img src="/media/Logo%20with%20slogan.png" alt="IT-Mike — IT makes sense" class="footer-logo-img"/>
+  </div>
   <div class="footer-copy">&copy; 2026 IT-Mike &mdash; Mike Jonckheere &mdash; Ardooie</div>
   <a href="https://mjon.be" class="footer-link">&#8594; Naar MJON.be</a>
 </footer>
@@ -314,10 +322,9 @@ fetch("/content/site.json").then(function(r){return r.json();}).then(function(d)
     var img=document.createElement("img");
     img.src=d.profile_photo;
     img.alt="Mike Jonckheere";
-    img.style.cssText="width:100%;height:100%;object-fit:cover;object-position:center 20%";
-    el.innerHTML="";
-    el.style="";
-    el.appendChild(img);
+    img.style.cssText="width:100%;height:100%;object-fit:cover;object-position:center top;display:block";
+    el.parentNode.replaceChild(img,el);
+    img.id="cms-profile-img";
   }
 }).catch(function(){});
 </script>
