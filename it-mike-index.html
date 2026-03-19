@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IT-Mike — IT-support, Consultancy &amp; Server beheer | Mike Jonckheere</title>
+<meta name="description" content="IT-Mike biedt professionele IT-support, helpdesk, server- en cloudbeheer, IT-consultancy en hardware-installaties voor bedrijven en particulieren in West-Vlaanderen."/>
+<meta name="keywords" content="IT support, helpdesk, server beheer, cloud, IT consultancy, hardware, West-Vlaanderen, Mike Jonckheere"/>
+<meta name="author" content="Mike Jonckheere — IT-Mike"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://it-mike.be/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://it-mike.be/"/>
+<meta property="og:title" content="IT-Mike — IT-support &amp; Consultancy"/>
+<meta property="og:description" content="Professionele IT-support, server- en cloudbeheer en IT-consultancy voor bedrijven en particulieren."/>
+<meta property="og:locale" content="nl_BE"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"IT-Mike","description":"IT-support, helpdesk, server- en cloudbeheer, IT-consultancy en hardware-installaties","url":"https://it-mike.be","telephone":"+32496797671","email":"info@it-mike.be","address":{"@type":"PostalAddress","addressLocality":"Ardooie","addressRegion":"West-Vlaanderen","addressCountry":"BE"},"areaServed":["West-Vlaanderen","Oost-Vlaanderen"],"founder":{"@type":"Person","name":"Mike Jonckheere"},"vatID":"BE0780671242"}
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"JOUW_TOKEN_HIER"}'></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0d1f3c;
+  --navy2:#152a52;
+  --mint:#00c896;
+  --mint2:#00a87e;
+  --amber:#f5a623;
+  --white:#ffffff;
+  --light:#f4f7fb;
+  --light2:#e8eef7;
+  --text:#1a2940;
+  --muted:#6b7f9e;
+  --border:rgba(13,31,60,.1);
+}
+html{scroll-behavior:smooth;font-size:17px}
+body{background:var(--white);color:var(--text);font-family:"Nunito Sans",sans-serif;font-weight:400;overflow-x:hidden;line-height:1.65}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 24px rgba(13,31,60,.08)}
+.nav-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
+.nav-logo-mark{width:36px;height:36px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo-mark svg{width:20px;height:20px;color:var(--mint)}
+.nav-logo-text{font-family:"Syne",sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy);letter-spacing:-.01em}
+.nav-logo-text span{color:var(--mint)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.88rem;font-weight:600;letter-spacing:.04em;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:var(--white);font-family:"Syne",sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.04em;padding:.55rem 1.4rem;border-radius:6px;text-decoration:none;transition:background .2s,transform .2s}
+.nav-cta:hover{background:var(--mint);transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-hamburger span{width:24px;height:2px;background:var(--navy);border-radius:2px}
+.mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:"Syne",sans-serif;font-weight:800;font-size:2.5rem;color:var(--navy);text-decoration:none;transition:color .2s}
+.mobile-menu a:hover{color:var(--mint)}
+.mobile-close{position:absolute;top:1.5rem;right:5vw;font-size:2rem;color:var(--muted);cursor:pointer;background:none;border:none}
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hero-left{background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:10rem 5vw 6rem 6vw;position:relative;overflow:hidden}
+.hero-left::before{content:"";position:absolute;top:-30%;right:-20%;width:70%;height:100%;background:radial-gradient(ellipse,rgba(0,200,150,.08) 0%,transparent 70%)}
+.hero-left::after{content:"";position:absolute;bottom:-10%;left:-10%;width:50%;height:60%;background:radial-gradient(ellipse,rgba(0,200,150,.05) 0%,transparent 70%)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mint);margin-bottom:1.8rem;opacity:0;animation:fadeUp .6s .2s forwards}
+.hero-eyebrow-dot{width:6px;height:6px;background:var(--mint);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-title{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(2.8rem,5vw,5rem);line-height:1.05;color:var(--white);letter-spacing:-.02em;opacity:0;animation:fadeUp .7s .4s forwards}
+.hero-title em{font-style:normal;color:var(--mint)}
+.hero-sub{margin-top:1.6rem;font-size:1rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:420px;opacity:0;animation:fadeUp .7s .6s forwards}
+.hero-actions{margin-top:2.5rem;display:flex;gap:.8rem;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .8s forwards}
+.hero-stats{margin-top:3.5rem;display:flex;gap:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.1);opacity:0;animation:fadeUp .7s 1s forwards}
+.hero-stat-num{font-family:"Syne",sans-serif;font-weight:800;font-size:1.8rem;color:var(--white);line-height:1}
+.hero-stat-num span{color:var(--mint)}
+.hero-stat-label{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.2rem;letter-spacing:.04em}
+.hero-right{background:var(--light);display:flex;align-items:center;justify-content:center;padding:8rem 5vw;position:relative;overflow:hidden}
+.hero-right::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(13,31,60,.06) 1px,transparent 1px);background-size:28px 28px}
+.hero-cards{position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem;width:100%;max-width:340px;opacity:0;animation:fadeIn .8s .6s forwards}
+.hero-card{background:var(--white);border-radius:12px;padding:1.4rem 1.6rem;box-shadow:0 4px 24px rgba(13,31,60,.07);display:flex;align-items:flex-start;gap:1rem;transition:transform .3s,box-shadow .3s}
+.hero-card:hover{transform:translateX(6px);box-shadow:0 8px 32px rgba(13,31,60,.12)}
+.hero-card-icon{width:42px;height:42px;border-radius:10px;background:var(--light);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--mint)}
+.hero-card-icon svg{width:22px;height:22px}
+.hero-card-title{font-family:"Syne",sans-serif;font-weight:700;font-size:.95rem;color:var(--navy);margin-bottom:.2rem}
+.hero-card-sub{font-size:.8rem;color:var(--muted);line-height:1.4}
+.hero-card.featured{border-left:3px solid var(--mint)}
+.btn-primary{display:inline-flex;align-items:center;gap:.6rem;background:var(--mint);color:var(--navy);font-family:"Syne",sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.02em;padding:.85rem 1.8rem;border-radius:8px;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s}
+.btn-primary:hover{background:#00e6ae;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,200,150,.3)}
+.btn-secondary{display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:var(--white);font-family:"Syne",sans-serif;font-weight:700;font-size:.95rem;padding:.85rem 1.8rem;border-radius:8px;text-decoration:none;border:1.5px solid rgba(255,255,255,.25);transition:border-color .2s,background .2s,transform .2s}
+.btn-secondary:hover{border-color:var(--mint);color:var(--mint);transform:translateY(-2px)}
+.btn-navy{display:inline-flex;align-items:center;gap:.6rem;background:var(--navy);color:var(--white);font-family:"Syne",sans-serif;font-weight:700;font-size:.95rem;padding:.85rem 1.8rem;border-radius:8px;text-decoration:none;transition:background .2s,transform .2s}
+.btn-navy:hover{background:var(--navy2);transform:translateY(-2px)}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;font-family:"Syne",sans-serif;font-weight:700;font-size:.95rem;padding:.85rem 1.8rem;border-radius:8px;text-decoration:none;transition:background .2s,transform .2s}
+.btn-whatsapp:hover{background:#1aad55;transform:translateY(-2px)}
+.section-wrap{padding:7rem 5vw}
+.section-wrap.light{background:var(--light)}
+.section-wrap.white{background:var(--white)}
+.section-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);margin-bottom:.9rem}
+.section-tag::before{content:"";display:block;width:20px;height:2px;background:var(--mint);border-radius:1px}
+.section-title{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3.2rem);color:var(--navy);line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+.section-title em{font-style:normal;color:var(--mint)}
+.section-sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.75}
+.diensten-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3.5rem}
+.dienst-card{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:2.2rem;transition:border-color .3s,transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+.dienst-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--mint),var(--mint2));transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.dienst-card:hover{border-color:rgba(0,200,150,.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(13,31,60,.09)}
+.dienst-card:hover::after{transform:scaleX(1)}
+.dienst-card-icon{width:50px;height:50px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;color:var(--mint);transition:background .3s}
+.dienst-card-icon svg{width:26px;height:26px}
+.dienst-card:hover .dienst-card-icon{background:rgba(0,200,150,.1)}
+.dienst-card-title{font-family:"Syne",sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy);margin-bottom:.7rem}
+.dienst-card-desc{font-size:.92rem;color:var(--muted);line-height:1.75}
+.dienst-tags{margin-top:1.3rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.dtag{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .7rem;border-radius:4px;background:var(--light);color:var(--muted)}
+#over{padding:7rem 5vw;display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;background:var(--white)}
+.over-img-side{position:relative}
+.over-img-card{background:var(--light);border-radius:20px;overflow:hidden;aspect-ratio:4/5;position:relative}
+.over-img-card img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.over-img-badge{position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;background:var(--white);border-radius:10px;padding:1rem 1.2rem;box-shadow:0 8px 24px rgba(13,31,60,.12);display:flex;align-items:center;gap:.9rem}
+.over-img-badge-icon{width:38px;height:38px;background:var(--mint);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.over-img-badge-icon svg{width:20px;height:20px;color:var(--navy)}
+.over-img-badge-text{font-family:"Syne",sans-serif;font-weight:700;font-size:.88rem;color:var(--navy)}
+.over-img-badge-sub{font-size:.75rem;color:var(--muted)}
+.over-content .section-title{margin-bottom:1.5rem}
+.over-text{font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:1rem}
+.over-text strong{color:var(--navy);font-weight:600}
+.over-checks{margin:1.5rem 0;display:flex;flex-direction:column;gap:.7rem}
+.over-check{display:flex;align-items:center;gap:.8rem;font-size:.92rem;color:var(--text)}
+.over-check-icon{width:22px;height:22px;background:rgba(0,200,150,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--mint)}
+.over-check-icon svg{width:13px;height:13px}
+#contact{padding:7rem 5vw;background:var(--navy);position:relative;overflow:hidden;text-align:center}
+#contact::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:80%;height:80%;background:radial-gradient(ellipse,rgba(0,200,150,.08) 0%,transparent 70%);pointer-events:none}
+.contact-title{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(2.2rem,5vw,4rem);color:var(--white);line-height:1.05;letter-spacing:-.02em;margin:1rem 0 1rem}
+.contact-title em{font-style:normal;color:var(--mint)}
+.contact-sub{font-size:1rem;color:rgba(255,255,255,.55);max-width:420px;margin:0 auto 3rem;line-height:1.75}
+.contact-cards{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.8rem 2rem;text-decoration:none;color:var(--white);display:flex;flex-direction:column;align-items:center;gap:.8rem;min-width:170px;transition:background .3s,border-color .3s,transform .3s}
+.contact-card:hover{background:rgba(0,200,150,.1);border-color:var(--mint);transform:translateY(-4px)}
+.contact-card svg{width:28px;height:28px;color:var(--mint)}
+.contact-card.wa svg{color:#25D366}
+.contact-card.wa:hover{background:rgba(37,211,102,.1);border-color:#25D366}
+.contact-card-label{font-family:"Syne",sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.04em}
+.contact-card-val{font-size:.82rem;color:rgba(255,255,255,.45)}
+.gdpr-bar{padding:.9rem 5vw;background:var(--light);border-top:1px solid var(--border);text-align:center;font-size:.78rem;color:var(--muted);line-height:1.6}
+.gdpr-bar a{color:var(--mint);text-decoration:none}
+footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo-wrap{display:flex;align-items:center;gap:.6rem}
+.footer-logo-mark{width:30px;height:30px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.footer-logo-mark svg{width:16px;height:16px;color:var(--mint)}
+.footer-logo-text{font-family:"Syne",sans-serif;font-weight:800;font-size:1rem;color:var(--navy)}
+.footer-logo-text span{color:var(--mint)}
+.footer-copy{font-size:.78rem;color:var(--muted)}
+.footer-link{font-size:.78rem;color:var(--mint);text-decoration:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .hero-left{padding:8rem 5vw 5rem}
+  #over{grid-template-columns:1fr}
+  .over-img-side{max-width:420px;margin:0 auto}
+}
+@media(max-width:640px){
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .diensten-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&#x2715;</button>
+  <a href="#diensten" class="mobile-link">Diensten</a>
+  <a href="#over" class="mobile-link">Over IT-Mike</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+<nav id="navbar">
+  <a href="#" class="nav-logo" aria-label="IT-Mike homepage">
+    <div class="nav-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+    <span class="nav-logo-text">IT<span>-Mike</span></span>
+  </a>
+  <ul class="nav-links"><li><a href="#diensten">Diensten</a></li><li><a href="#over">Over mij</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a href="tel:+32496797671" class="nav-cta">Bel nu</a>
+  <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Ardooie &mdash; West-Vlaanderen</div>
+    <h1 class="hero-title">IT die<br/><em>gewoon werkt.</em><br/>Altijd.</h1>
+    <p class="hero-sub">Van snelle helpdesk tot serverbeheer en IT-consultancy &mdash; voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.</p>
+    <div class="hero-actions">
+      <a href="tel:+32496797671" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.4 2.83 2 2 0 012.39.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>04 96 79 76 71</a>
+      <a href="https://wa.me/+32496797671" target="_blank" rel="noopener" class="btn-secondary"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">24<span>/7</span></div><div class="hero-stat-label">Bereikbaar</div></div>
+      <div><div class="hero-stat-num">&#60;2<span>u</span></div><div class="hero-stat-label">Reactietijd</div></div>
+      <div><div class="hero-stat-num">W<span>&amp;</span>O</div><div class="hero-stat-label">Vl&ndash;aanderen</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-cards">
+      <div class="hero-card featured"><div class="hero-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div><div><div class="hero-card-title">IT-Support &amp; Helpdesk</div><div class="hero-card-sub">Snel en persoonlijk &mdash; remote of ter plaatse</div></div></div>
+      <div class="hero-card"><div class="hero-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6" stroke-width="3"/><line x1="6" y1="18" x2="6.01" y2="18" stroke-width="3"/></svg></div><div><div class="hero-card-title">Server &amp; Cloud beheer</div><div class="hero-card-sub">Stabiele infrastructuur, altijd up-to-date</div></div></div>
+      <div class="hero-card"><div class="hero-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16" stroke-width="3"/></svg></div><div><div class="hero-card-title">IT-Consultancy</div><div class="hero-card-sub">Strategisch advies afgestemd op uw noden</div></div></div>
+      <div class="hero-card"><div class="hero-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="hero-card-title">Hardware &amp; installaties</div><div class="hero-card-sub">Van pc tot server &mdash; correct opgezet</div></div></div>
+    </div>
+  </div>
+</section>
+<section id="diensten" class="section-wrap light">
+  <div class="section-tag reveal">Wat ik doe</div>
+  <h2 class="section-title reveal">Mijn <em>diensten</em></h2>
+  <p class="section-sub reveal">Praktische IT-hulp zonder omwegen &mdash; voor particulieren die vastlopen en bedrijven die verder willen groeien.</p>
+  <div class="diensten-grid">
+    <div class="dienst-card reveal">
+      <div class="dienst-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+      <h3 class="dienst-card-title">IT-Support &amp; Helpdesk</h3>
+      <p class="dienst-card-desc">Vastgelopen? Ik los het op. Remote of ter plaatse, snel en zonder gedoe. Voor particulieren en bedrijven die niet kunnen wachten.</p>
+      <div class="dienst-tags"><span class="dtag">Remote support</span><span class="dtag">Ter plaatse</span><span class="dtag">Windows / Mac</span><span class="dtag">Printers &amp; randapparatuur</span></div>
+    </div>
+    <div class="dienst-card reveal" style="transition-delay:0.1s">
+      <div class="dienst-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6" stroke-width="3"/><line x1="6" y1="18" x2="6.01" y2="18" stroke-width="3"/></svg></div>
+      <h3 class="dienst-card-title">Server &amp; Cloud beheer</h3>
+      <p class="dienst-card-desc">Uw servers en cloudomgeving in goede handen. Van installatie en configuratie tot monitoring en onderhoud — proactief en betrouwbaar.</p>
+      <div class="dienst-tags"><span class="dtag">Windows Server</span><span class="dtag">Linux</span><span class="dtag">Microsoft 365</span><span class="dtag">Back-up &amp; recovery</span></div>
+    </div>
+    <div class="dienst-card reveal" style="transition-delay:0.2s">
+      <div class="dienst-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16" stroke-width="3"/></svg></div>
+      <h3 class="dienst-card-title">IT-Consultancy</h3>
+      <p class="dienst-card-desc">Welke richting moet uw IT op? Ik analyseer uw huidige situatie en geef helder, eerlijk advies — zonder verkooppraatjes.</p>
+      <div class="dienst-tags"><span class="dtag">IT-audit</span><span class="dtag">Strategisch advies</span><span class="dtag">Kostenoptimalisatie</span><span class="dtag">Projectbegeleiding</span></div>
+    </div>
+    <div class="dienst-card reveal" style="transition-delay:0.30000000000000004s">
+      <div class="dienst-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+      <h3 class="dienst-card-title">Hardware &amp; installaties</h3>
+      <p class="dienst-card-desc">Van nieuwe werkpost tot volledige serverruimte — ik installeer, configureer en test alles zodat u meteen aan de slag kunt.</p>
+      <div class="dienst-tags"><span class="dtag">PC &amp; laptop</span><span class="dtag">NAS &amp; servers</span><span class="dtag">Randapparatuur</span><span class="dtag">On-site installatie</span></div>
+    </div>
+  </div>
+</section>
+<section id="over">
+  <div class="over-img-side reveal">
+    <div class="over-img-card">
+      <!-- Vervang door jouw foto: <img src="fotos/mike.jpg" alt="Mike Jonckheere"/> -->
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#152a52 0%,#0d1f3c 100%);display:flex;align-items:center;justify-content:center;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(0,200,150,.3)" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </div>
+    </div>
+    <div class="over-img-badge">
+      <div class="over-img-badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div><div class="over-img-badge-text">Mike Jonckheere</div><div class="over-img-badge-sub">IT-generalist &amp; probleemoplosser</div></div>
+    </div>
+  </div>
+  <div class="over-content reveal" style="transition-delay:.15s">
+    <div class="section-tag">Wie ben ik</div>
+    <h2 class="section-title">Persoonlijke IT,<br/><em>zonder gedoe.</em></h2>
+    <p class="over-text">Ik ben <strong>Mike Jonckheere</strong>, oprichter van IT-Mike. Met jarenlange ervaring in IT-support, serverbeheer en consultancy help ik particulieren en bedrijven om hun IT vlot en veilig te laten werken.</p>
+    <p class="over-text">Geen callcenter, geen wachtrijen &mdash; gewoon <strong>direct contact</strong> met de persoon die het oplost. Snel, duidelijk en zonder technisch jargon.</p>
+    <div class="over-checks">
+      <div class="over-check"><div class="over-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Snel ter plaatse of remote</div>
+      <div class="over-check"><div class="over-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Duidelijke communicatie, geen jargon</div>
+      <div class="over-check"><div class="over-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Eerlijk advies &mdash; uw belang eerst</div>
+      <div class="over-check"><div class="over-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Actief in West- en Oost-Vlaanderen</div>
+    </div>
+    <div style="margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap">
+      <a href="tel:+32496797671" class="btn-navy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.4 2.83 2 2 0 012.39.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>04 96 79 76 71</a>
+      <a href="mailto:info@it-mike.be" class="btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>info@it-mike.be</a>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="section-tag reveal" style="justify-content:center;color:rgba(0,200,150,.8)">Laten we praten</div>
+  <h2 class="contact-title reveal">Probleem? <em>Bel me.</em><br/>Vraag? <em>Bel me.</em></h2>
+  <p class="contact-sub reveal">Ik reageer snel en kom graag langs voor een vrijblijvend gesprek.</p>
+  <div class="contact-cards reveal">
+    <a href="tel:+32496797671" class="contact-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.4 2.83 2 2 0 012.39.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><div class="contact-card-label">Bel me</div><div class="contact-card-val">04 96 79 76 71</div></a>
+    <a href="https://wa.me/+32496797671" target="_blank" rel="noopener" class="contact-card wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><div class="contact-card-label">WhatsApp</div><div class="contact-card-val">Stuur een bericht</div></a>
+    <a href="mailto:info@it-mike.be" class="contact-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg><div class="contact-card-label">E-mail</div><div class="contact-card-val">info@it-mike.be</div></a>
+  </div>
+</section>
+<div class="gdpr-bar">&#x1F512; Geen cookies &middot; Statistieken via <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Web Analytics</a> (GDPR-conform) &nbsp;|&nbsp; <a href="mailto:info@it-mike.be">info@it-mike.be</a> &nbsp;|&nbsp; BTW BE0780.671.242</div>
+<footer>
+  <div class="footer-logo-wrap"><div class="footer-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><span class="footer-logo-text">IT<span>-Mike</span></span></div>
+  <div class="footer-copy">&copy; 2026 IT-Mike &mdash; Mike Jonckheere &mdash; Ardooie</div>
+  <a href="https://mjon.be" class="footer-link">&#8594; Naar MJON.be</a>
+</footer>
+<script>
+const navbar=document.getElementById("navbar");
+window.addEventListener("scroll",()=>navbar.classList.toggle("scrolled",scrollY>40));
+document.getElementById("hamburger").addEventListener("click",()=>document.getElementById("mobileMenu").classList.add("open"));
+document.getElementById("mobileClose").addEventListener("click",()=>document.getElementById("mobileMenu").classList.remove("open"));
+document.querySelectorAll(".mobile-link").forEach(l=>l.addEventListener("click",()=>document.getElementById("mobileMenu").classList.remove("open")));
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
