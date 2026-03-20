@@ -22,7 +22,7 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"JOUW_TOKEN_HIER"}'></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -39,7 +39,7 @@
   --border:rgba(13,31,60,.1);
 }
 html{scroll-behavior:smooth;font-size:17px}
-body{background:var(--white);color:var(--text);font-family:"Nunito Sans",sans-serif;font-weight:400;overflow-x:hidden;line-height:1.65}
+body{background:var(--white);color:var(--text);font-family:"Inter",sans-serif;font-weight:400;overflow-x:hidden;line-height:1.65}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
 nav.scrolled{box-shadow:0 2px 24px rgba(13,31,60,.08)}
 .nav-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
@@ -201,7 +201,7 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
     <div class="hero-stats">
       <div><div class="hero-stat-num">24<span>/7</span></div><div class="hero-stat-label">Bereikbaar</div></div>
       <div><div class="hero-stat-num">&#60;2<span>u</span></div><div class="hero-stat-label">Reactietijd</div></div>
-      <div><div class="hero-stat-num">W<span>&amp;</span>O</div><div class="hero-stat-label">Vl&ndash;aanderen</div></div>
+      <div><div class="hero-stat-num" style="font-size:1.1rem;line-height:1.2">West &amp;<br/>Oost-Vl.</div><div class="hero-stat-label">Actiegebied</div></div>
     </div>
   </div>
   <div class="hero-right">
@@ -292,6 +292,8 @@ footer{padding:2.2rem 5vw;background:var(--white);border-top:1px solid var(--bor
   <a href="https://mjon.be" class="footer-link">&#8594; Naar MJON.be</a>
 </footer>
 <script>
+var profileVid=document.querySelector("#over video");
+if(profileVid){profileVid.addEventListener("ended",function(){this.pause();});}
 const navbar=document.getElementById("navbar");
 window.addEventListener("scroll",()=>navbar.classList.toggle("scrolled",scrollY>40));
 document.getElementById("hamburger").addEventListener("click",()=>document.getElementById("mobileMenu").classList.add("open"));
