@@ -3,7 +3,15 @@
   "hero_subtitle": "Van snelle helpdesk tot serverbeheer en IT-consultancy — voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.",
   "about_1": "Ik ben Mike Jonckheere, oprichter van IT-Mike. Met jarenlange ervaring in IT-support, serverbeheer en consultancy help ik particulieren en bedrijven om hun IT vlot en veilig te laten werken.",
   "about_2": "Geen callcenter, geen wachtrijen — gewoon direct contact met de persoon die het oplost. Snel, duidelijk en zonder technisch jargon.",
+  "profile_media": "",
   "contact_phone": "+32496797671",
-  "contact_email": "info@mjon.be",
-  "profile_photo": ""
+  "contact_email": "info@it-mike.be",
+  "d1_title": "IT-Support & Helpdesk",
+  "d1_desc": "Vastgelopen? Ik los het op. Remote of ter plaatse, snel en zonder gedoe. Voor particulieren en bedrijven die niet kunnen wachten.",
+  "d2_title": "Server & Cloud beheer",
+  "d2_desc": "Uw servers en cloudomgeving in goede handen. Van installatie en configuratie tot monitoring en onderhoud — proactief en betrouwbaar.",
+  "d3_title": "IT-Consultancy",
+  "d3_desc": "Welke richting moet uw IT op? Ik analyseer uw huidige situatie en geef helder, eerlijk advies — zonder verkooppraatjes.",
+  "d4_title": "Hardware & installaties",
+  "d4_desc": "Van nieuwe werkpost tot volledige serverruimte — ik installeer, configureer en test alles zodat u meteen aan de slag kunt."
 }

@@ -5,11 +5,9 @@ backend:
   base_url: https://it-mike.be
   auth_endpoint: api/auth
 
-# Waar foto's worden opgeslagen na upload via CMS
 media_folder: "fotos"
 public_folder: "fotos"
 
-# Taal
 locale: "nl"
 
 collections:
@@ -18,10 +16,11 @@ collections:
     files:
 
       - name: "home"
-        label: "Teksten & Foto's"
+        label: "Teksten & Media"
         file: "content/site.json"
         format: "json"
         fields:
+
           - label: "📍 Locatie (hero)"
             name: "hero_location"
             widget: "string"
@@ -40,6 +39,15 @@ collections:
             name: "about_2"
             widget: "text"
 
+          - label: "🎬 Profielfoto of -video"
+            name: "profile_media"
+            widget: "file"
+            required: false
+            hint: "Upload een foto (jpg/png) of video (webm/mp4) van jezelf"
+            media_library:
+              config:
+                multiple: false
+
           - label: "📞 Telefoonnummer"
             name: "contact_phone"
             widget: "string"
@@ -49,8 +57,35 @@ collections:
             name: "contact_email"
             widget: "string"
 
-          - label: "🖼️ Profielfoto"
-            name: "profile_photo"
-            widget: "image"
-            required: false
-            hint: "Upload een foto van jezelf (optioneel)"
+          - label: "🔧 Dienst 1 — Titel"
+            name: "d1_title"
+            widget: "string"
+            hint: "Bv: IT-Support & Helpdesk"
+
+          - label: "🔧 Dienst 1 — Omschrijving"
+            name: "d1_desc"
+            widget: "text"
+
+          - label: "💻 Dienst 2 — Titel"
+            name: "d2_title"
+            widget: "string"
+
+          - label: "💻 Dienst 2 — Omschrijving"
+            name: "d2_desc"
+            widget: "text"
+
+          - label: "💡 Dienst 3 — Titel"
+            name: "d3_title"
+            widget: "string"
+
+          - label: "💡 Dienst 3 — Omschrijving"
+            name: "d3_desc"
+            widget: "text"
+
+          - label: "🖥️ Dienst 4 — Titel"
+            name: "d4_title"
+            widget: "string"
+
+          - label: "🖥️ Dienst 4 — Omschrijving"
+            name: "d4_desc"
+            widget: "text"
