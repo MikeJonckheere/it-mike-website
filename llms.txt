@@ -1,0 +1,76 @@
+# IT-Mike
+
+> IT-Mike is de éénmanszaak van Mike Jonckheere, gevestigd in Ardooie (West-Vlaanderen, België). IT-Mike biedt persoonlijke IT-support, server- en cloudbeheer, IT-consultancy en hardware-installaties aan voor bedrijven en particulieren in West- en Oost-Vlaanderen. Geen callcenter — direct contact met Mike.
+
+## Bedrijfsgegevens
+
+- **Naam**: IT-Mike
+- **Oprichter & contactpersoon**: Mike Jonckheere
+- **BTW**: BE0780.671.242
+- **Locatie**: Ardooie, 8850 West-Vlaanderen, België
+- **Coördinaten**: 50.9814° N, 3.2057° O
+- **Telefoon**: +32 496 79 76 71
+- **E-mail**: info@mjon.be
+- **Website**: https://it-mike.be
+- **Opgericht**: 2022
+- **Beschikbaarheid**: Maandag–vrijdag 8u–20u, zaterdag 9u–17u
+
+## Actiegebied
+
+IT-Mike werkt on-site in heel West-Vlaanderen en Oost-Vlaanderen, met focus op:
+
+**West-Vlaanderen**: Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde, Ruiselede en omliggende gemeenten.
+
+**Oost-Vlaanderen**: Deinze, Aalter, Nevele, Zulte en omstreken.
+
+Remote IT-hulp is beschikbaar in heel België.
+
+## Diensten
+
+### IT-Support & Helpdesk
+Remote of ter plaatse. Reactietijd minder dan 2 uur voor dringende problemen. Ondersteunde systemen: Windows, macOS, printers, randapparatuur. Voor particulieren, zelfstandigen en bedrijven.
+
+### Server & Cloud beheer
+Installatie, configuratie, monitoring en onderhoud van: Windows Server, Linux, Microsoft 365, Hyper-V, Synology NAS, VPN-oplossingen, firewalls, Active Directory, backup & recovery. Proactief beheer.
+
+### IT-Consultancy
+IT-audit, strategisch advies, kostenoptimalisatie en projectbegeleiding voor KMO's en zelfstandigen. Eerlijk advies zonder verkooppraatjes.
+
+### Hardware & installaties
+PC, laptop, NAS, servers, randapparatuur. Volledige on-site installatie, configuratie en uitleg in West- en Oost-Vlaanderen.
+
+## Onderscheidende kenmerken
+
+- Persoonlijk contact — altijd direct met Mike, nooit een callcenter
+- Korte reactietijd (< 2 uur voor dringende problemen)
+- Transparante prijzen vooraf, geen verrassingen
+- On-site én remote hulp
+- Zowel voor particulieren als professionele klanten
+- Actief in West- en Oost-Vlaanderen
+
+## Veelgestelde vragen
+
+**Is IT-Mike ook voor particulieren?**
+Ja. IT-Mike helpt zowel thuisgebruikers als bedrijven en zelfstandigen.
+
+**Hoe snel reageert IT-Mike?**
+Streefdoel minder dan 2 uur voor dringende problemen. Bel +32 496 79 76 71 voor directe hulp.
+
+**Kan IT-Mike remote helpen?**
+Ja, remote support is mogelijk voor de meeste IT-problemen. Voor hardware en netwerk komt Mike langs.
+
+**In welke regio werkt IT-Mike?**
+On-site in West-Vlaanderen (Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark...) en Oost-Vlaanderen (Deinze, Aalter...). Remote hulp heel België.
+
+**Welke systemen kent IT-Mike?**
+Windows, macOS, Linux, Windows Server, Microsoft 365, Hyper-V, Synology NAS, VPN, firewalls, Active Directory, Office 365, cloud migratie, backup & recovery.
+
+**Wat kost een tussenkomst?**
+Prijzen worden vooraf gecommuniceerd. Neem contact op voor een vrijblijvende inschatting.
+
+## Contact
+
+Telefoon: +32 496 79 76 71
+WhatsApp: https://wa.me/+32496797671
+E-mail: info@mjon.be
+Website: https://it-mike.be

@@ -21,16 +21,23 @@ collections:
         format: "json"
         fields:
 
-          - label: "📍 Locatie (hero)"
+          # ── HERO ──────────────────────────────────────────
+          - label: "📍 Locatie (hero meta)"
             name: "hero_location"
             widget: "string"
             hint: "Bijv: Ardooie — West-Vlaanderen"
 
-          - label: "📝 Hero subtekst"
+          - label: "📝 Hero subtekst (meta description)"
             name: "hero_subtitle"
             widget: "text"
-            hint: "De tekst onder de hoofdtitel in het hero blok"
+            hint: "Wordt ook gebruikt als meta description van de pagina"
 
+          - label: "💬 Hero lede (introductiezin)"
+            name: "hero_lede"
+            widget: "text"
+            hint: "De korte zin naast de knoppen in de hero sectie"
+
+          # ── OVER MIJ ──────────────────────────────────────
           - label: "👤 Over mij — alinea 1"
             name: "about_1"
             widget: "text"
@@ -38,6 +45,16 @@ collections:
           - label: "👤 Over mij — alinea 2"
             name: "about_2"
             widget: "text"
+
+          - label: "✅ Over mij — checkpunten"
+            name: "over_checks"
+            widget: "list"
+            label_singular: "Punt"
+            hint: "De vinkjes onder de tekst. Volgorde is aanpasbaar."
+            field:
+              label: "Punt"
+              name: "punt"
+              widget: "string"
 
           - label: "🎬 Profielfoto of -video"
             name: "profile_media"
@@ -48,6 +65,7 @@ collections:
               config:
                 multiple: false
 
+          # ── CONTACT ───────────────────────────────────────
           - label: "📞 Telefoonnummer"
             name: "contact_phone"
             widget: "string"
@@ -57,14 +75,29 @@ collections:
             name: "contact_email"
             widget: "string"
 
+          - label: "💬 Contact subtekst"
+            name: "contact_sub"
+            widget: "string"
+            hint: "De zin onder de contacttitel"
+
+          # ── DIENSTEN ──────────────────────────────────────
           - label: "🔧 Dienst 1 — Titel"
             name: "d1_title"
             widget: "string"
-            hint: "Bv: IT-Support & Helpdesk"
 
           - label: "🔧 Dienst 1 — Omschrijving"
             name: "d1_desc"
             widget: "text"
+
+          - label: "🔧 Dienst 1 — Bulletpunten"
+            name: "d1_points"
+            widget: "list"
+            label_singular: "Punt"
+            hint: "Maximaal 4 punten aanbevolen"
+            field:
+              label: "Punt"
+              name: "punt"
+              widget: "string"
 
           - label: "💻 Dienst 2 — Titel"
             name: "d2_title"
@@ -74,6 +107,15 @@ collections:
             name: "d2_desc"
             widget: "text"
 
+          - label: "💻 Dienst 2 — Bulletpunten"
+            name: "d2_points"
+            widget: "list"
+            label_singular: "Punt"
+            field:
+              label: "Punt"
+              name: "punt"
+              widget: "string"
+
           - label: "💡 Dienst 3 — Titel"
             name: "d3_title"
             widget: "string"
@@ -82,6 +124,15 @@ collections:
             name: "d3_desc"
             widget: "text"
 
+          - label: "💡 Dienst 3 — Bulletpunten"
+            name: "d3_points"
+            widget: "list"
+            label_singular: "Punt"
+            field:
+              label: "Punt"
+              name: "punt"
+              widget: "string"
+
           - label: "🖥️ Dienst 4 — Titel"
             name: "d4_title"
             widget: "string"
@@ -89,3 +140,51 @@ collections:
           - label: "🖥️ Dienst 4 — Omschrijving"
             name: "d4_desc"
             widget: "text"
+
+          - label: "🖥️ Dienst 4 — Bulletpunten"
+            name: "d4_points"
+            widget: "list"
+            label_singular: "Punt"
+            field:
+              label: "Punt"
+              name: "punt"
+              widget: "string"
+
+          # ── WERKWIJZE ─────────────────────────────────────
+          - label: "📋 Stap 1 — Titel"
+            name: "stap1_title"
+            widget: "string"
+
+          - label: "📋 Stap 1 — Uitleg"
+            name: "stap1_desc"
+            widget: "text"
+
+          - label: "📋 Stap 2 — Titel"
+            name: "stap2_title"
+            widget: "string"
+
+          - label: "📋 Stap 2 — Uitleg"
+            name: "stap2_desc"
+            widget: "text"
+
+          - label: "📋 Stap 3 — Titel"
+            name: "stap3_title"
+            widget: "string"
+
+          - label: "📋 Stap 3 — Uitleg"
+            name: "stap3_desc"
+            widget: "text"
+
+          # ── FAQ ───────────────────────────────────────────
+          - label: "❓ FAQ — Veelgestelde vragen"
+            name: "faq"
+            widget: "list"
+            label_singular: "Vraag"
+            hint: "Vragen en antwoorden die op de website en in zoekmachines verschijnen. Vrij aanpasbaar en uitbreidbaar."
+            fields:
+              - label: "Vraag"
+                name: "question"
+                widget: "string"
+              - label: "Antwoord"
+                name: "answer"
+                widget: "text"

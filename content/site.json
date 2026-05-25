@@ -1,17 +1,61 @@
 {
   "hero_location": "Ardooie — West-Vlaanderen",
   "hero_subtitle": "Van snelle helpdesk tot serverbeheer en IT-consultancy — voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.",
+  "hero_lede": "Geen callcenters, geen tickets in een wachtrij. Direct contact met Mike — voor IT-support, serverbeheer en eerlijk advies.",
   "about_1": "Ik ben Mike Jonckheere, oprichter van IT-Mike. Met jarenlange ervaring in IT-support, serverbeheer en consultancy help ik particulieren en bedrijven om hun IT vlot en veilig te laten werken.",
   "about_2": "Geen callcenter, geen wachtrijen — gewoon direct contact met de persoon die het oplost. Snel, duidelijk en zonder technisch jargon.",
   "profile_media": "",
   "contact_phone": "+32496797671",
   "contact_email": "info@mjon.be",
+  "contact_sub": "Ik reageer snel en kom graag langs voor een vrijblijvend gesprek.",
   "d1_title": "IT-Support & Helpdesk",
   "d1_desc": "Vastgelopen? Ik los het op. Remote of ter plaatse, snel en zonder gedoe. Voor particulieren en bedrijven die niet kunnen wachten.",
+  "d1_points": ["Remote support", "Ter plaatse", "Windows / Mac", "Printers & randapparatuur"],
   "d2_title": "Server & Cloud beheer",
   "d2_desc": "Uw servers en cloudomgeving in goede handen. Van installatie en configuratie tot monitoring en onderhoud — proactief en betrouwbaar.",
+  "d2_points": ["Windows Server", "Linux", "Microsoft 365", "Backup & recovery"],
   "d3_title": "IT-Consultancy",
   "d3_desc": "Welke richting moet uw IT op? Ik analyseer uw huidige situatie en geef helder, eerlijk advies — zonder verkooppraatjes.",
+  "d3_points": ["IT-audit", "Strategisch advies", "Kostenoptimalisatie", "Projectbegeleiding"],
   "d4_title": "Hardware & installaties",
-  "d4_desc": "Van nieuwe werkpost tot volledige serverruimte — ik installeer, configureer en test alles zodat u meteen aan de slag kunt."
+  "d4_desc": "Van nieuwe werkpost tot volledige serverruimte — ik installeer, configureer en test alles zodat u meteen aan de slag kunt.",
+  "d4_points": ["PC & laptop", "NAS & servers", "Randapparatuur", "On-site installatie"],
+  "stap1_title": "U belt of mailt",
+  "stap1_desc": "Direct contact met mij — geen wachtrij. Korte intake van het probleem of de vraag.",
+  "stap2_title": "Ik analyseer & plan",
+  "stap2_desc": "Remote check of ter plaatse. Een eerlijk plan met duidelijke kost vooraf.",
+  "stap3_title": "Opgelost & opgevolgd",
+  "stap3_desc": "Probleem opgelost, alles getest. Daarna proactieve opvolging als u dat wenst.",
+  "over_checks": [
+    "Snel ter plaatse of remote",
+    "Duidelijke communicatie, geen jargon",
+    "Eerlijk advies — uw belang eerst",
+    "Actief in West- en Oost-Vlaanderen"
+  ],
+  "faq": [
+    {
+      "question": "Werkt IT-Mike ook voor particulieren?",
+      "answer": "Ja — particulieren, zelfstandigen en KMO's zijn alle welkom. Of het nu gaat om een vastgelopen laptop, printerprobleem of volledige serverinrichting."
+    },
+    {
+      "question": "Hoe snel reageert IT-Mike?",
+      "answer": "Streefdoel is minder dan 2 uur voor dringende problemen. Bel direct voor de snelste respons — remote hulp is vrijwel onmiddellijk mogelijk, on-site interventie in West-Vlaanderen zo snel mogelijk."
+    },
+    {
+      "question": "In welke gemeenten komt IT-Mike ter plaatse?",
+      "answer": "Actief in heel West-Vlaanderen: Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde en omstreken. Ook Oost-Vlaanderen (Deinze, Aalter). Remote hulp is overal in België mogelijk."
+    },
+    {
+      "question": "Kan IT-Mike ook remote (op afstand) helpen?",
+      "answer": "Ja, voor de meeste problemen is remote support mogelijk via een beveiligde verbinding. Sneller en even effectief als een bezoek ter plaatse — zonder verplaatsingskosten."
+    },
+    {
+      "question": "Welke systemen beheert IT-Mike?",
+      "answer": "Windows, macOS, Linux, Windows Server, Microsoft 365, Hyper-V, Synology NAS, VPN, firewalls, Active Directory, Office 365, cloud migratie en backup & recovery."
+    },
+    {
+      "question": "Wat kost een tussenkomst?",
+      "answer": "Prijzen worden altijd vooraf duidelijk gecommuniceerd — geen verrassingen achteraf. Bel of mail voor een vrijblijvende inschatting."
+    }
+  ]
 }
