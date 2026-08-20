@@ -9,9 +9,10 @@
   --paper-2: #EFEAD8;
   --white: #FFFFFF;
   --density: 1;
-  --pad-section: calc(8rem * var(--density));
-  --pad-x: clamp(1.5rem, 5vw, 5rem);
+  --pad-section: calc(7rem * var(--density));
+  --pad-x: clamp(1.5rem, 5vw, 4rem);
   --radius: 4px;
+  --content-max: 1440px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -60,7 +61,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
 }
 .nav-brand { display: flex; align-items: center; gap: 0.7rem; }
 .nav-brand img { height: 30px; width: auto; }
-.nav-dog { height: 64px !important; }
+.nav-dog { height: 44px !important; }
 .nav-name {
   font-family: "Cinzel", "Big Shoulders Display", serif;
   font-weight: 900;
@@ -187,7 +188,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
 .hero { padding-top: 6rem; }
 
 .hero-editorial {
-  min-height: 100vh;
+  min-height: min(90vh, 840px);
   padding: 7rem var(--pad-x) 3rem;
   display: flex;
   flex-direction: column;
@@ -211,6 +212,9 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   grid-template-rows: auto 1fr auto auto;
   gap: 2.5rem 4rem;
   align-content: space-between;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  width: 100%;
 }
 
 .hero-meta {
@@ -243,8 +247,8 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   grid-row: 2 / 3;
   font-family: "Big Shoulders Display", "Instrument Serif", serif;
   font-weight: 800;
-  font-size: clamp(4rem, 13vw, 14rem);
-  line-height: 0.88;
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  line-height: 0.9;
   letter-spacing: -0.02em;
   color: var(--ink);
   align-self: center;
@@ -344,7 +348,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   justify-self: center;
   position: relative;
   width: 100%;
-  max-width: 380px;
+  max-width: 300px;
   pointer-events: none;
   display: flex;
   align-items: flex-end;
@@ -353,7 +357,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
 .hero-mascot img {
   width: 100%;
   height: auto;
-  max-height: 70vh;
+  max-height: 52vh;
   object-fit: contain;
   object-position: bottom center;
   filter: grayscale(0.05) contrast(1.05);
@@ -875,7 +879,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
 }
 .section-title {
   font-family: "Big Shoulders Display", "Instrument Serif", serif;
-  font-size: clamp(2.6rem, 6vw, 5.4rem);
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
   line-height: 0.95;
   letter-spacing: -0.02em;
   font-weight: 800;
@@ -899,6 +903,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   gap: 0;
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
+  max-width: var(--content-max);
 }
 .dienst {
   border-right: 1px solid var(--line);
@@ -934,8 +939,8 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   padding-top: 0.4rem;
 }
 .dienst-head svg {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   color: var(--ink);
   opacity: 0.85;
 }
@@ -1003,6 +1008,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   margin-top: 1rem;
+  max-width: var(--content-max);
 }
 .stap {
   padding: 2rem 2.2rem 2rem 0;
@@ -1046,6 +1052,8 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   grid-template-columns: 0.85fr 1fr;
   gap: 5rem;
   align-items: center;
+  max-width: var(--content-max);
+  margin-inline: auto;
 }
 .over-portrait {
   position: relative;
@@ -1165,7 +1173,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
 .contact-tag .tag-num { color: rgba(247, 243, 233, 0.5); }
 .contact-title {
   font-family: "Big Shoulders Display", serif;
-  font-size: clamp(2.8rem, 7vw, 6.5rem);
+  font-size: clamp(2.6rem, 5.5vw, 5rem);
   font-weight: 800;
   line-height: 0.92;
   letter-spacing: -0.02em;
@@ -1272,9 +1280,11 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   flex-wrap: wrap;
   gap: 1rem;
   padding: 2rem var(--pad-x);
+  max-width: var(--content-max);
+  margin-inline: auto;
 }
 .footer-brand { display: flex; align-items: center; gap: 0.9rem; }
-.footer-dog { height: 56px; width: auto; }
+.footer-dog { height: 40px; width: auto; }
 .footer-name {
   font-family: "Cinzel", "Big Shoulders Display", serif;
   font-weight: 900;
@@ -1303,6 +1313,8 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   font-family: "JetBrains Mono", monospace;
   font-size: 0.72rem;
   color: var(--muted);
+  max-width: var(--content-max);
+  margin-inline: auto;
 }
 
 /* ============== RESPONSIVE ============== */
