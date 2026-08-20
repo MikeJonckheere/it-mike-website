@@ -904,6 +904,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
   max-width: var(--content-max);
+  margin-inline: auto;
 }
 .dienst {
   border-right: 1px solid var(--line);
@@ -1009,6 +1010,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   gap: 0;
   margin-top: 1rem;
   max-width: var(--content-max);
+  margin-inline: auto;
 }
 .stap {
   padding: 2rem 2.2rem 2rem 0;
