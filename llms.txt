@@ -1,6 +1,6 @@
 # IT-Mike
 
-> IT-Mike is de éénmanszaak van Mike Jonckheere, gevestigd in Ardooie (West-Vlaanderen, België). IT-Mike biedt persoonlijke IT-support, server- en cloudbeheer, IT-consultancy en hardware-installaties aan voor bedrijven en particulieren in West- en Oost-Vlaanderen. Geen callcenter — direct contact met Mike.
+> IT-Mike is de éénmanszaak van Mike Jonckheere, gevestigd in Ardooie (West-Vlaanderen, België). IT-Mike biedt computer herstel, persoonlijke IT-support, server- en cloudbeheer, IT-consultancy en hardware-installaties aan voor bedrijven en particulieren in Ardooie, Lichtervelde en heel West- en Oost-Vlaanderen. Geen callcenter — direct contact met Mike.
 
 ## Bedrijfsgegevens
 
@@ -10,7 +10,7 @@
 - **Locatie**: Ardooie, 8850 West-Vlaanderen, België
 - **Coördinaten**: 50.9814° N, 3.2057° O
 - **Telefoon**: +32 496 79 76 71
-- **E-mail**: info@mjon.be
+- **E-mail**: mike@it-mike.be
 - **Website**: https://it-mike.be
 - **Opgericht**: 2022
 - **Beschikbaarheid**: Maandag–vrijdag 8u–20u, zaterdag 9u–17u
@@ -26,6 +26,9 @@ IT-Mike werkt on-site in heel West-Vlaanderen en Oost-Vlaanderen, met focus op:
 Remote IT-hulp is beschikbaar in heel België.
 
 ## Diensten
+
+### Computer herstel
+Herstelling van trage, vastgelopen of defecte pc's en laptops. Remote of ter plaatse in Ardooie, Lichtervelde en heel West-Vlaanderen.
 
 ### IT-Support & Helpdesk
 Remote of ter plaatse. Reactietijd minder dan 2 uur voor dringende problemen. Ondersteunde systemen: Windows, macOS, printers, randapparatuur. Voor particulieren, zelfstandigen en bedrijven.
@@ -50,6 +53,9 @@ PC, laptop, NAS, servers, randapparatuur. Volledige on-site installatie, configu
 
 ## Veelgestelde vragen
 
+**Doet IT-Mike ook computer herstel in Lichtervelde?**
+Ja, computers en laptops herstellen in Lichtervelde en omstreken is een veelgevraagde dienst — remote of met een bezoek ter plaatse.
+
 **Is IT-Mike ook voor particulieren?**
 Ja. IT-Mike helpt zowel thuisgebruikers als bedrijven en zelfstandigen.
 
@@ -72,5 +78,5 @@ Prijzen worden vooraf gecommuniceerd. Neem contact op voor een vrijblijvende ins
 
 Telefoon: +32 496 79 76 71
 WhatsApp: https://wa.me/+32496797671
-E-mail: info@mjon.be
+E-mail: mike@it-mike.be
 Website: https://it-mike.be

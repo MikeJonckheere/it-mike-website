@@ -1,16 +1,16 @@
 {
-  "hero_location": "Ardooie — West-Vlaanderen",
-  "hero_subtitle": "Van snelle helpdesk tot serverbeheer en IT-consultancy — voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.",
-  "hero_lede": "Geen callcenters, geen tickets in een wachtrij. Direct contact met Mike — voor IT-support, serverbeheer en eerlijk advies.",
+  "hero_location": "Ardooie — Lichtervelde — West-Vlaanderen",
+  "hero_subtitle": "Computer herstel, snelle helpdesk, serverbeheer en IT-consultancy — voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.",
+  "hero_lede": "Geen callcenters, geen tickets in een wachtrij. Direct contact met Mike — voor computerherstel, IT-support, serverbeheer en eerlijk advies.",
   "about_1": "Ik ben Mike Jonckheere, oprichter van IT-Mike. Met jarenlange ervaring in IT-support, serverbeheer en consultancy help ik particulieren en bedrijven om hun IT vlot en veilig te laten werken.",
   "about_2": "Geen callcenter, geen wachtrijen — gewoon direct contact met de persoon die het oplost. Snel, duidelijk en zonder technisch jargon.",
   "profile_media": "",
   "contact_phone": "+32496797671",
-  "contact_email": "info@mjon.be",
+  "contact_email": "mike@it-mike.be",
   "contact_sub": "Ik reageer snel en kom graag langs voor een vrijblijvend gesprek.",
-  "d1_title": "IT-Support & Helpdesk",
-  "d1_desc": "Vastgelopen? Ik los het op. Remote of ter plaatse, snel en zonder gedoe. Voor particulieren en bedrijven die niet kunnen wachten.",
-  "d1_points": ["Remote support", "Ter plaatse", "Windows / Mac", "Printers & randapparatuur"],
+  "d1_title": "Computer Herstel & IT-Support",
+  "d1_desc": "Computer traag, vastgelopen of stuk? Ik herstel het. Remote of ter plaatse, snel en zonder gedoe. Voor particulieren en bedrijven die niet kunnen wachten.",
+  "d1_points": ["Computer herstel", "Remote support", "Windows / Mac", "Printers & randapparatuur"],
   "d2_title": "Server & Cloud beheer",
   "d2_desc": "Uw servers en cloudomgeving in goede handen. Van installatie en configuratie tot monitoring en onderhoud — proactief en betrouwbaar.",
   "d2_points": ["Windows Server", "Linux", "Microsoft 365", "Backup & recovery"],
@@ -27,6 +27,7 @@
   "stap3_title": "Opgelost & opgevolgd",
   "stap3_desc": "Probleem opgelost, alles getest. Daarna proactieve opvolging als u dat wenst.",
   "over_checks": [
+    "Computer herstel, ook in Lichtervelde",
     "Snel ter plaatse of remote",
     "Duidelijke communicatie, geen jargon",
     "Eerlijk advies — uw belang eerst",
@@ -44,6 +45,10 @@
     {
       "question": "In welke gemeenten komt IT-Mike ter plaatse?",
       "answer": "Actief in heel West-Vlaanderen: Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde en omstreken. Ook Oost-Vlaanderen (Deinze, Aalter). Remote hulp is overal in België mogelijk."
+    },
+    {
+      "question": "Doet IT-Mike ook computer herstel in Lichtervelde?",
+      "answer": "Ja — computers en laptops herstellen in Lichtervelde en omstreken doe ik regelmatig, remote of met een bezoek ter plaatse. Bel gerust voor een snelle diagnose."
     },
     {
       "question": "Kan IT-Mike ook remote (op afstand) helpen?",
