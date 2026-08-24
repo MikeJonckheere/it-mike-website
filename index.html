@@ -21,7 +21,7 @@
 <meta property="og:description" content="Computer herstel, IT-support en serverbeheer in Ardooie, Lichtervelde en West-Vlaanderen. Mike Jonckheere — direct bereikbaar, reactietijd &lt; 2 uur."/>
 <meta property="og:locale" content="nl_BE"/>
 <meta property="og:image" content="https://it-mike.be/media/Logo with slogan.png"/>
-<script type="application/ld+json">
+<script type="application/ld+json" id="ld-json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -239,7 +239,7 @@
           "name": "Wat kost een tussenkomst van IT-Mike?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Prijzen worden vooraf duidelijk gecommuniceerd — geen verrassingen achteraf. Neem contact op via 04 96 79 76 71 of mike@it-mike.be voor een vrijblijvende offerte of inschatting."
+            "text": "IT-Mike start met een diagnose-uur (€62,50 excl. BTW) — tenzij het probleem al binnen dat eerste uur opgelost is. Na de diagnose volgt een duidelijke inschatting van wat er nodig is en wat het kost, vóór er verder gewerkt wordt. Geen verrassingen achteraf."
           }
         },
         {
@@ -623,7 +623,7 @@
       </details>
       <details class="faq-item">
         <summary class="faq-q">Wat kost een tussenkomst?</summary>
-        <p class="faq-a">Prijzen worden altijd vooraf duidelijk gecommuniceerd — geen verrassingen achteraf. Bel of mail voor een vrijblijvende inschatting.</p>
+        <p class="faq-a">Ik start met een diagnose-uur (€62,50 excl. BTW) — tenzij het probleem al binnen dat eerste uur opgelost is. Na de diagnose krijgt u een duidelijke inschatting van wat er nodig is en wat het kost, vóór ik verderga. Geen verrassingen achteraf.</p>
       </details>
     </div>
   </div>
@@ -768,6 +768,26 @@ fetch('/content/site.json').then(function(r) { return r.json(); }).then(function
     if (faqList) faqList.innerHTML = d.faq.map(function(item) {
       return '<details class="faq-item"><summary class="faq-q">' + esc(item.question) + '</summary><p class="faq-a">' + esc(item.answer) + '</p></details>';
     }).join('');
+
+    // Houd de FAQPage structured data (JSON-LD) in sync met de CMS-inhoud,
+    // zodat zoekmachines/AI dezelfde vragen en antwoorden (incl. bedragen) zien.
+    var ldScript = document.getElementById('ld-json');
+    if (ldScript) {
+      try {
+        var ld = JSON.parse(ldScript.textContent);
+        var faqNode = (ld['@graph'] || []).find(function(n) { return n['@type'] === 'FAQPage'; });
+        if (faqNode) {
+          faqNode.mainEntity = d.faq.map(function(item) {
+            return {
+              '@type': 'Question',
+              'name': item.question,
+              'acceptedAnswer': { '@type': 'Answer', 'text': item.answer }
+            };
+          });
+          ldScript.textContent = JSON.stringify(ld);
+        }
+      } catch (e) {}
+    }
   }
 
   // Profielmedia
