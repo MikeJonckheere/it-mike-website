@@ -27,7 +27,7 @@
   "stap3_title": "Opgelost & opgevolgd",
   "stap3_desc": "Probleem opgelost, alles getest. Daarna proactieve opvolging als u dat wenst.",
   "over_checks": [
-    "Computer herstel, ook in Lichtervelde",
+    "Computer herstel in heel West-Vlaanderen",
     "Snel ter plaatse of remote",
     "Duidelijke communicatie, geen jargon",
     "Eerlijk advies — uw belang eerst",
@@ -35,20 +35,36 @@
   ],
   "faq": [
     {
-      "question": "Werkt IT-Mike ook voor particulieren?",
-      "answer": "Ja — particulieren, zelfstandigen en KMO's zijn alle welkom. Of het nu gaat om een vastgelopen laptop, printerprobleem of volledige serverinrichting."
+      "question": "Wat doet IT-Mike?",
+      "answer": "IT-Mike is de éénmanszaak van Mike Jonckheere uit Ardooie. Computer herstel, IT-support & helpdesk, server- en cloudbeheer, IT-consultancy en hardware-installaties voor particulieren en bedrijven in West- en Oost-Vlaanderen. Direct contact, geen callcenter."
     },
     {
-      "question": "Hoe snel reageert IT-Mike?",
-      "answer": "Streefdoel is minder dan 2 uur voor dringende problemen. Bel direct voor de snelste respons — remote hulp is vrijwel onmiddellijk mogelijk, on-site interventie in West-Vlaanderen zo snel mogelijk."
+      "question": "Waar kan ik mijn computer laten herstellen in West-Vlaanderen?",
+      "answer": "Overal in West-Vlaanderen: Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde, Ruiselede, Ichtegem, Zedelgem, Meulebeke, Hooglede, Staden, Ledegem, Moorslede, Diksmuide en omstreken — remote of met een bezoek ter plaatse. Bel gerust voor een snelle diagnose."
     },
     {
       "question": "In welke gemeenten komt IT-Mike ter plaatse?",
-      "answer": "Actief in heel West-Vlaanderen: Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde en omstreken. Ook Oost-Vlaanderen (Deinze, Aalter). Remote hulp is overal in België mogelijk."
+      "answer": "Actief in heel West-Vlaanderen: Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde, Ruiselede en omstreken. Ook Oost-Vlaanderen (Deinze, Aalter, Nevele, Zulte). Remote hulp is overal in België mogelijk."
     },
     {
-      "question": "Doet IT-Mike ook computer herstel in Lichtervelde?",
-      "answer": "Ja — computers en laptops herstellen in Lichtervelde en omstreken doe ik regelmatig, remote of met een bezoek ter plaatse. Bel gerust voor een snelle diagnose."
+      "question": "Doet IT-Mike computer herstel aan huis?",
+      "answer": "Beide kan. De meeste mensen brengen hun toestel gewoon binnen — dat is meestal het snelst. Ik kom ook zeker ter plaatse in heel West-Vlaanderen, vooral voor opleiding, begeleiding of installaties waar dat handiger is."
+    },
+    {
+      "question": "Waarom kiezen voor IT-Mike in plaats van een winkelketen of onlinedienst?",
+      "answer": "Bij mij krijgt u altijd rechtstreeks contact — geen callcenter, geen ticketsysteem, geen wisselende techniekers. Reactietijd onder de 2 uur, prijzen vooraf duidelijk, en eerlijk advies zonder verkooppraatjes."
+    },
+    {
+      "question": "Herstelt IT-Mike ook computers die niet meer opstarten, een virus hebben of met dataverlies?",
+      "answer": "Ja — een pc die niet meer opstart, traag is, een virus/malware heeft of waar data van gered moet worden: dat zijn herstellingen die ik dagelijks doe. Remote diagnose of een bezoek ter plaatse, naargelang het probleem."
+    },
+    {
+      "question": "Hoe snel reageert IT-Mike?",
+      "answer": "Streefdoel is minder dan 2 uur voor dringende problemen — vaak nog dezelfde dag geholpen. Bel direct voor de snelste respons: remote hulp is vrijwel onmiddellijk mogelijk, on-site interventie in West-Vlaanderen zo snel mogelijk."
+    },
+    {
+      "question": "Werkt IT-Mike ook voor particulieren?",
+      "answer": "Ja — particulieren, zelfstandigen en KMO's zijn alle welkom. Of het nu gaat om een vastgelopen laptop, printerprobleem of volledige serverinrichting."
     },
     {
       "question": "Kan IT-Mike ook remote (op afstand) helpen?",
