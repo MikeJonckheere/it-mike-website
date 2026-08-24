@@ -19,7 +19,7 @@
 
 IT-Mike werkt on-site in heel West-Vlaanderen en Oost-Vlaanderen, met focus op:
 
-**West-Vlaanderen**: Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde, Ruiselede en omliggende gemeenten.
+**West-Vlaanderen**: Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde, Ruiselede, Ichtegem, Zedelgem, Meulebeke, Hooglede, Staden, Ledegem, Moorslede, Diksmuide en omliggende gemeenten.
 
 **Oost-Vlaanderen**: Deinze, Aalter, Nevele, Zulte en omstreken.
 
@@ -53,20 +53,29 @@ PC, laptop, NAS, servers, randapparatuur. Volledige on-site installatie, configu
 
 ## Veelgestelde vragen
 
-**Doet IT-Mike ook computer herstel in Lichtervelde?**
-Ja, computers en laptops herstellen in Lichtervelde en omstreken is een veelgevraagde dienst — remote of met een bezoek ter plaatse.
+**Waar kan ik mijn computer laten herstellen in West-Vlaanderen?**
+Overal in West-Vlaanderen — Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde, Ruiselede, Ichtegem, Zedelgem, Meulebeke, Hooglede, Staden, Ledegem, Moorslede, Diksmuide en omstreken — remote of met een bezoek ter plaatse.
+
+**Doet IT-Mike computer herstel aan huis?**
+Ja, voor de meeste problemen komt Mike bij particulieren en bedrijven langs — thuis of op kantoor — in heel West-Vlaanderen. Voor kleinere problemen is remote hulp vaak nog sneller.
+
+**Waarom kiezen voor IT-Mike in plaats van een winkelketen of onlinedienst?**
+Altijd rechtstreeks contact met Mike Jonckheere zelf — geen callcenter, geen ticketsysteem, geen wisselende techniekers. Reactietijd onder de 2 uur, prijzen vooraf duidelijk, eerlijk advies zonder verkooppraatjes.
+
+**Herstelt IT-Mike ook computers die niet meer opstarten, een virus hebben of met dataverlies?**
+Ja — een pc die niet meer opstart, traag is, een virus/malware heeft of waar data van gered moet worden zijn herstellingen die IT-Mike dagelijks uitvoert.
 
 **Is IT-Mike ook voor particulieren?**
 Ja. IT-Mike helpt zowel thuisgebruikers als bedrijven en zelfstandigen.
 
 **Hoe snel reageert IT-Mike?**
-Streefdoel minder dan 2 uur voor dringende problemen. Bel +32 496 79 76 71 voor directe hulp.
+Streefdoel minder dan 2 uur voor dringende problemen, vaak nog dezelfde dag geholpen. Bel +32 496 79 76 71 voor directe hulp.
 
 **Kan IT-Mike remote helpen?**
 Ja, remote support is mogelijk voor de meeste IT-problemen. Voor hardware en netwerk komt Mike langs.
 
 **In welke regio werkt IT-Mike?**
-On-site in West-Vlaanderen (Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark...) en Oost-Vlaanderen (Deinze, Aalter...). Remote hulp heel België.
+On-site in West-Vlaanderen (Ardooie, Roeselare, Tielt, Izegem, Torhout, Kortemark, Wingene, Pittem, Lichtervelde, Ruiselede, Ichtegem, Zedelgem, Meulebeke, Hooglede, Staden, Ledegem, Moorslede, Diksmuide...) en Oost-Vlaanderen (Deinze, Aalter, Nevele, Zulte...). Remote hulp heel België.
 
 **Welke systemen kent IT-Mike?**
 Windows, macOS, Linux, Windows Server, Microsoft 365, Hyper-V, Synology NAS, VPN, firewalls, Active Directory, Office 365, cloud migratie, backup & recovery.
