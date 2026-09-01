@@ -188,3 +188,24 @@ collections:
               - label: "Antwoord"
                 name: "answer"
                 widget: "text"
+
+      - name: "website-bouwen"
+        label: "Website Bouwen — Foto's"
+        file: "content/website-bouwen.json"
+        format: "json"
+        fields:
+
+          - label: "📸 Foto's (bedrijfsfotografie & portretten)"
+            name: "photos"
+            widget: "list"
+            label_singular: "Foto"
+            hint: "Foto's voor de fotografie-sectie op /website-bouwen/. Zolang hier geen foto's staan, tonen we plaatshouders."
+            required: false
+            fields:
+              - label: "Foto"
+                name: "image"
+                widget: "image"
+              - label: "Bijschrift"
+                name: "caption"
+                widget: "string"
+                default: "Bedrijfsfotografie"

@@ -175,7 +175,7 @@
     <h2 class="section-title">Uw vak, <em>mooi</em> in beeld.</h2>
     <p class="section-sub">Een professioneel portret voor op de homepage, actiefoto's op de werf, of beelden van afgewerkt werk — ik maak ze zelf, passend bij uw website.</p>
   </div>
-  <div class="wb-foto-grid">
+  <div class="wb-foto-grid" id="fotoGrid">
     <div class="wb-foto-tile">
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
         <path d="M8 16 L14 16 L17 11 L31 11 L34 16 L40 16 A2 2 0 0 1 42 18 L42 36 A2 2 0 0 1 40 38 L8 38 A2 2 0 0 1 6 36 L6 18 A2 2 0 0 1 8 16 Z"/>
@@ -198,8 +198,8 @@
       <span>Afgewerkt resultaat</span>
     </div>
   </div>
-  <!-- Mike: vervang de tegels hierboven door echte foto's zodra je ze aanlevert —
-       zet ze in /fotos/ en verander elke .wb-foto-tile in <img src="/fotos/naam.jpg" alt="..."/> -->
+  <!-- Plaatshouders hierboven verdwijnen automatisch zodra er foto's staan in
+       content/website-bouwen.json (beheer via /admin → "Website Bouwen — Foto's"). -->
 </section>
 
 <!-- Domeincheck -->
@@ -303,6 +303,20 @@ var revealObs = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+
+// Fotografie — CMS-foto's laden (valt terug op plaatshouders als leeg)
+fetch('/content/website-bouwen.json').then(function(r) { return r.json(); }).then(function(d) {
+  if (!Array.isArray(d.photos) || !d.photos.length) return;
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  var grid = document.getElementById('fotoGrid');
+  grid.innerHTML = d.photos.filter(function(p) { return p.image; }).map(function(p) {
+    return '<div class="wb-foto-tile wb-foto-tile--img">' +
+      '<img src="' + esc(p.image) + '" alt="' + esc(p.caption || '') + '" loading="lazy"/>' +
+      '<span>' + esc(p.caption || '') + '</span></div>';
+  }).join('');
+}).catch(function() {});
 
 // Domeincheck
 (function() {
