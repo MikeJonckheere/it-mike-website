@@ -1489,3 +1489,60 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   border: 0;
   display: block;
 }
+
+/* ============== WEBSITE-BOUWEN PAGINA ============== */
+.wb-hero-cta {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.wb-tags {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.wb-tag {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  background: var(--white);
+}
+.wb-proof {
+  margin-top: 2.4rem;
+  padding: 1.6rem 1.8rem;
+  background: var(--paper-2);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  max-width: 640px;
+}
+.wb-proof p { font-size: 1rem; color: var(--ink-2); line-height: 1.6; }
+.wb-foto-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+.wb-foto-tile {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  border: 1px dashed var(--line-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: var(--muted);
+}
+.wb-foto-tile svg { width: 44px; height: 44px; opacity: 0.5; }
+.wb-foto-tile span { font-family: "JetBrains Mono", monospace; font-size: 0.8rem; letter-spacing: 0.02em; }
+.wb-contact-actions {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
