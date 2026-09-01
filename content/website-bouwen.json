@@ -1,3 +1,16 @@
 {
-  "photos": []
+  "photos": [
+    {
+      "caption": "Bedrijfsfotografie - zonnepanelen",
+      "image": "fotos/roof.jpg"
+    },
+    {
+      "caption": "Bedrijfsfotografie - netwerk",
+      "image": "fotos/fortigate.jpg"
+    },
+    {
+      "caption": "Bedrijfsfotografie - headshot",
+      "image": "fotos/web-demo1.jpg"
+    }
+  ]
 }
