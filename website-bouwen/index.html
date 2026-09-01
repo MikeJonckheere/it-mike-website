@@ -207,7 +207,7 @@
   <div class="section-head">
     <div class="section-tag"><span class="tag-num">§ TOOL</span>Gratis domeincheck</div>
     <h2 class="section-title">Is uw naam nog <em>vrij?</em></h2>
-    <p class="section-sub"><span class="mono">.com</span> check ik meteen live. Voor <span class="mono">.be</span> ziet u hieronder meteen het live resultaat van DNS Belgium.</p>
+    <p class="section-sub"><span class="mono">.com</span> check ik meteen live. Voor <span class="mono">.be</span> krijgt u een link naar het live resultaat van DNS Belgium.</p>
   </div>
 
   <div class="domeincheck-box">
@@ -234,9 +234,9 @@
         <span class="dcr-status">Bezig…</span>
         <a class="btn btn-primary dcr-request" hidden>Vraag deze naam aan <span class="btn-arrow">→</span></a>
       </div>
-      <div class="domeincheck-be-wrap" id="beWrap">
-        <span class="dcr-status-muted domeincheck-be-label">Live resultaat van DNS Belgium — <span class="mono" id="beDomainLabel">—</span></span>
-        <iframe id="beIframe" class="domeincheck-iframe" title="DNS Belgium domeincheck" loading="lazy"></iframe>
+      <div class="domeincheck-be-cta" id="beWrap">
+        <span class="dcr-domain mono" id="beDomainLabel">—</span>
+        <a class="btn btn-primary" id="beLink" target="_blank" rel="noopener">Bekijk .be-resultaat op dns.be <span class="btn-arrow">↗</span></a>
       </div>
     </div>
   </div>
@@ -313,7 +313,7 @@ document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el
   var resultsEl = document.getElementById('domainResults');
   var resultCom = document.getElementById('resultCom');
   var beDomainLabel = document.getElementById('beDomainLabel');
-  var beIframe = document.getElementById('beIframe');
+  var beLink = document.getElementById('beLink');
 
   function buildMailto(domain) {
     var subject = 'Domeinnaam aanvraag: ' + domain;
@@ -348,7 +348,7 @@ document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el
 
   function renderBe(data) {
     beDomainLabel.textContent = data.domain;
-    beIframe.src = 'https://www.dnsbelgium.be/nl/whois/info/' + data.domain;
+    beLink.href = 'https://www.dnsbelgium.be/nl/whois/info/' + data.domain;
   }
 
   form.addEventListener('submit', function(e) {

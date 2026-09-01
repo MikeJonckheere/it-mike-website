@@ -1472,22 +1472,16 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
 .domeincheck-result.is-available .dcr-status { color: #1E9E5C; }
 .domeincheck-result.is-taken .dcr-status { color: #C4372E; }
 .domeincheck-result.is-unknown .dcr-status { color: var(--muted); }
-.domeincheck-be-wrap {
+.domeincheck-be-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.8rem 1.2rem;
+  padding: 1rem 1.3rem;
   border: 1px solid var(--line-2);
   border-radius: var(--radius);
   background: var(--white);
-  overflow: hidden;
-}
-.domeincheck-be-label {
-  display: block;
-  padding: 0.9rem 1.3rem;
-  border-bottom: 1px solid var(--line-2);
-}
-.domeincheck-iframe {
-  width: 100%;
-  height: 480px;
-  border: 0;
-  display: block;
 }
 
 /* ============== WEBSITE-BOUWEN PAGINA ============== */
