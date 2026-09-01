@@ -66,25 +66,11 @@ async function checkBe(name) {
 }
 
 async function whoisQuery(hostname, port, query) {
-  const socket = connect({ hostname, port }, { allowHalfOpen: true });
-  await socket.opened;
-
+  const socket = connect({ hostname, port });
   const writer = socket.writable.getWriter();
   await writer.write(new TextEncoder().encode(`${query}\r\n`));
   await writer.close();
-  writer.releaseLock();
-
-  const reader = socket.readable.getReader();
-  const decoder = new TextDecoder();
-  let text = "";
-  while (true) {
-    const { value, done } = await reader.read();
-    if (done) break;
-    text += decoder.decode(value, { stream: true });
-  }
-
-  await socket.close();
-  return text;
+  return await new Response(socket.readable).text();
 }
 
 function jsonResponse(data, status = 200) {
