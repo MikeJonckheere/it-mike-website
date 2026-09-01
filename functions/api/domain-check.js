@@ -43,6 +43,15 @@ export async function onRequestGet(context) {
     }
   }
 
+  if (url.searchParams.get("wtest") === "3") {
+    try {
+      const text = await whoisQuery("whois.iana.org", 43, "be");
+      return jsonResponse({ wtest: 3, len: text.length, sample: text.slice(0, 400) });
+    } catch (err) {
+      return jsonResponse({ wtest: 3, error: `${err.name}: ${err.message}` });
+    }
+  }
+
   const [be, com] = await Promise.all([checkBe(name), checkCom(name)]);
 
   return jsonResponse({ name, results: { be, com } });
