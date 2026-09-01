@@ -133,7 +133,7 @@ async function checkCom(name) {
 
 async function checkBe(name, apiKey) {
   const domain = `${name}.be`;
-  if (!apiKey) return { domain, available: null };
+  if (!apiKey) return { domain, available: null, debug: "no-api-key" };
 
   try {
     const params = new URLSearchParams({
@@ -144,17 +144,23 @@ async function checkBe(name, apiKey) {
       mode: "DNS_AND_WHOIS",
     });
     const res = await fetch(`https://domain-availability.whoisxmlapi.com/api/v1?${params}`);
-    if (!res.ok) return { domain, available: null };
+    const bodyText = await res.text();
+    if (!res.ok) return { domain, available: null, debug: { httpStatus: res.status, body: bodyText.slice(0, 300) } };
 
-    const data = await res.json();
+    let data;
+    try {
+      data = JSON.parse(bodyText);
+    } catch (e) {
+      return { domain, available: null, debug: { parseError: bodyText.slice(0, 300) } };
+    }
     const status = (data.domainAvailability || data.DomainInfo?.domainAvailability || "")
       .toUpperCase();
 
     if (status === "AVAILABLE") return { domain, available: true };
     if (status === "UNAVAILABLE") return { domain, available: false };
-    return { domain, available: null };
+    return { domain, available: null, debug: { unexpectedShape: JSON.stringify(data).slice(0, 300) } };
   } catch (err) {
-    return { domain, available: null };
+    return { domain, available: null, debug: { error: `${err.name}: ${err.message}` } };
   }
 }
 
