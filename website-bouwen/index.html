@@ -332,10 +332,12 @@ fetch('/content/website-bouwen.json').then(function(r) { return r.json(); }).the
     return '/' + p;
   }
   var grid = document.getElementById('fotoGrid');
-  grid.innerHTML = d.photos.filter(function(p) { return p.image; }).map(function(p) {
-    return '<div class="wb-foto-tile wb-foto-tile--img">' +
-      '<img src="' + esc(toUrl(p.image)) + '" alt="' + esc(p.caption || '') + '" loading="lazy"/>' +
-      '<span>' + esc(p.caption || '') + '</span></div>';
+  grid.innerHTML = d.photos.filter(function(p) { return p.image || p.video; }).map(function(p) {
+    var caption = esc(p.caption || '');
+    var media = p.video
+      ? '<video src="' + esc(toUrl(p.video)) + '" autoplay muted loop playsinline></video>'
+      : '<img src="' + esc(toUrl(p.image)) + '" alt="' + caption + '" loading="lazy"/>';
+    return '<div class="wb-foto-tile wb-foto-tile--img">' + media + '<span>' + caption + '</span></div>';
   }).join('');
 }).catch(function() {});
 

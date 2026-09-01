@@ -1540,7 +1540,8 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   padding: 0;
   overflow: hidden;
 }
-.wb-foto-tile--img img {
+.wb-foto-tile--img img,
+.wb-foto-tile--img video {
   position: absolute;
   inset: 0;
   width: 100%;
