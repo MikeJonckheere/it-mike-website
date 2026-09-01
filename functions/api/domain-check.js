@@ -49,15 +49,15 @@ async function checkBe(name) {
   try {
     const text = await whoisQuery("whois.dns.be", 43, domain);
     const match = text.match(/Status:\s*(NOT AVAILABLE|AVAILABLE)/i);
-    if (!match) return { domain, available: null, debug: text.slice(0, 300) };
+    if (!match) return { domain, available: null };
     return { domain, available: match[1].toUpperCase() === "AVAILABLE" };
   } catch (err) {
-    return { domain, available: null, debug: `${err.name}: ${err.message}` };
+    return { domain, available: null };
   }
 }
 
 async function whoisQuery(hostname, port, query) {
-  const socket = connect({ hostname, port });
+  const socket = connect({ hostname, port }, { allowHalfOpen: true });
   const writer = socket.writable.getWriter();
   await writer.write(new TextEncoder().encode(`${query}\r\n`));
   await writer.close();
