@@ -1456,27 +1456,18 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
 .domeincheck-result {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 0.8rem 1.2rem;
   padding: 1rem 1.3rem;
   border: 1px solid var(--line-2);
   border-radius: var(--radius);
   background: var(--white);
 }
 .dcr-domain { font-size: 1.05rem; }
-.dcr-status { font-weight: 500; color: var(--muted); }
+.dcr-status { font-weight: 500; color: var(--muted); margin-right: auto; }
+.dcr-request { padding: 0.6rem 1.1rem; font-size: 0.85rem; }
 .domeincheck-result.is-available { border-color: #2DD37C; }
 .domeincheck-result.is-available .dcr-status { color: #1E9E5C; }
 .domeincheck-result.is-taken .dcr-status { color: #C4372E; }
 .domeincheck-result.is-unknown .dcr-status { color: var(--muted); }
-.domeincheck-cta {
-  margin-top: 2.4rem;
-  padding: 1.6rem;
-  background: var(--paper-2);
-  border-radius: var(--radius);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.2rem;
-  justify-content: space-between;
-}
-.domeincheck-cta p { max-width: 380px; }

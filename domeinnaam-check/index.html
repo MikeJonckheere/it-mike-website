@@ -84,16 +84,13 @@
       <div class="domeincheck-result" id="resultBe">
         <span class="dcr-domain mono">—</span>
         <span class="dcr-status">Bezig…</span>
+        <a class="btn btn-primary dcr-request" hidden>Vraag deze naam aan <span class="btn-arrow">→</span></a>
       </div>
       <div class="domeincheck-result" id="resultCom">
         <span class="dcr-domain mono">—</span>
         <span class="dcr-status">Bezig…</span>
+        <a class="btn btn-primary dcr-request" hidden>Vraag deze naam aan <span class="btn-arrow">→</span></a>
       </div>
-    </div>
-
-    <div class="domeincheck-cta reveal" id="domainCta" hidden>
-      <p>Naam vrij? Ik registreer 'm en bouw er meteen een website bij.</p>
-      <a href="/#contact" class="btn btn-ghost">Vraag een website aan <span class="btn-arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -143,18 +140,31 @@ document.querySelectorAll('.mobile-link').forEach(function(link) {
   var submitBtn = document.getElementById('domainSubmit');
   var errorEl = document.getElementById('domainError');
   var resultsEl = document.getElementById('domainResults');
-  var ctaEl = document.getElementById('domainCta');
   var resultBe = document.getElementById('resultBe');
   var resultCom = document.getElementById('resultCom');
+
+  function buildMailto(domain) {
+    var subject = 'Domeinnaam aanvraag: ' + domain;
+    var body = 'Goeiedag Mike,\n\n' +
+      'Ik heb via de domeinnaam-checker op it-mike.be gezien dat ' + domain + ' nog vrij is.\n' +
+      'Ik wil deze graag laten registreren, samen met een nieuwe website.\n\n' +
+      'Mijn naam: \n' +
+      'Mijn telefoonnummer: \n';
+    return 'mailto:mike@it-mike.be?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
 
   function renderResult(el, data) {
     var domainEl = el.querySelector('.dcr-domain');
     var statusEl = el.querySelector('.dcr-status');
+    var requestEl = el.querySelector('.dcr-request');
     domainEl.textContent = data.domain;
     el.classList.remove('is-available', 'is-taken', 'is-unknown');
+    requestEl.hidden = true;
     if (data.available === true) {
       el.classList.add('is-available');
       statusEl.textContent = '✓ Vrij';
+      requestEl.href = buildMailto(data.domain);
+      requestEl.hidden = false;
     } else if (data.available === false) {
       el.classList.add('is-taken');
       statusEl.textContent = '✕ Bezet';
@@ -170,7 +180,6 @@ document.querySelectorAll('.mobile-link').forEach(function(link) {
     if (!name) return;
 
     errorEl.hidden = true;
-    ctaEl.hidden = true;
     resultsEl.hidden = false;
     submitBtn.disabled = true;
 
@@ -178,6 +187,7 @@ document.querySelectorAll('.mobile-link').forEach(function(link) {
       el.classList.remove('is-available', 'is-taken', 'is-unknown');
       el.querySelector('.dcr-domain').textContent = '—';
       el.querySelector('.dcr-status').textContent = 'Bezig…';
+      el.querySelector('.dcr-request').hidden = true;
     });
 
     fetch('/api/domain-check?name=' + encodeURIComponent(name))
@@ -191,9 +201,6 @@ document.querySelectorAll('.mobile-link').forEach(function(link) {
         }
         renderResult(resultBe, r.data.results.be);
         renderResult(resultCom, r.data.results.com);
-        if (r.data.results.be.available || r.data.results.com.available) {
-          ctaEl.hidden = false;
-        }
       })
       .catch(function() {
         resultsEl.hidden = true;
