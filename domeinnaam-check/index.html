@@ -81,15 +81,14 @@
     <p class="domeincheck-error" id="domainError" hidden></p>
 
     <div class="domeincheck-results" id="domainResults" hidden>
-      <div class="domeincheck-result" id="resultBe">
-        <span class="dcr-domain mono">—</span>
-        <span class="dcr-status dcr-status-muted">Rechtstreeks bij DNS Belgium</span>
-        <a class="btn btn-ghost dcr-external" target="_blank" rel="noopener">Check op dns.be <span class="btn-arrow">↗</span></a>
-      </div>
       <div class="domeincheck-result" id="resultCom">
         <span class="dcr-domain mono">—</span>
         <span class="dcr-status">Bezig…</span>
         <a class="btn btn-primary dcr-request" hidden>Vraag deze naam aan <span class="btn-arrow">→</span></a>
+      </div>
+      <div class="domeincheck-be-wrap" id="beWrap">
+        <span class="dcr-status-muted domeincheck-be-label">Live resultaat van DNS Belgium — <span class="mono" id="beDomainLabel">—</span></span>
+        <iframe id="beIframe" class="domeincheck-iframe" title="DNS Belgium domeincheck" loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -140,8 +139,9 @@ document.querySelectorAll('.mobile-link').forEach(function(link) {
   var submitBtn = document.getElementById('domainSubmit');
   var errorEl = document.getElementById('domainError');
   var resultsEl = document.getElementById('domainResults');
-  var resultBe = document.getElementById('resultBe');
   var resultCom = document.getElementById('resultCom');
+  var beDomainLabel = document.getElementById('beDomainLabel');
+  var beIframe = document.getElementById('beIframe');
 
   function buildMailto(domain) {
     var subject = 'Domeinnaam aanvraag: ' + domain;
@@ -174,9 +174,9 @@ document.querySelectorAll('.mobile-link').forEach(function(link) {
     }
   }
 
-  function renderBe(el, data) {
-    el.querySelector('.dcr-domain').textContent = data.domain;
-    el.querySelector('.dcr-external').href = 'https://www.dnsbelgium.be/nl/whois/info/' + data.domain;
+  function renderBe(data) {
+    beDomainLabel.textContent = data.domain;
+    beIframe.src = 'https://www.dnsbelgium.be/nl/whois/info/' + data.domain;
   }
 
   form.addEventListener('submit', function(e) {
@@ -192,7 +192,7 @@ document.querySelectorAll('.mobile-link').forEach(function(link) {
     resultCom.querySelector('.dcr-domain').textContent = '—';
     resultCom.querySelector('.dcr-status').textContent = 'Bezig…';
     resultCom.querySelector('.dcr-request').hidden = true;
-    resultBe.querySelector('.dcr-domain').textContent = '—';
+    beDomainLabel.textContent = '—';
 
     fetch('/api/domain-check?name=' + encodeURIComponent(name))
       .then(function(r) { return r.json().then(function(d) { return { ok: r.ok, data: d }; }); })
@@ -203,7 +203,7 @@ document.querySelectorAll('.mobile-link').forEach(function(link) {
           errorEl.hidden = false;
           return;
         }
-        renderBe(resultBe, r.data.results.be);
+        renderBe(r.data.results.be);
         renderResult(resultCom, r.data.results.com);
       })
       .catch(function() {
