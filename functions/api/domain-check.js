@@ -3,13 +3,14 @@
  * URL: /api/domain-check?name=voorbeeld
  *
  * .com — via de publieke RDAP-dienst van Verisign (opvolger van WHOIS).
- * .be  — DNS Belgium biedt geen RDAP aan voor .be zelf (enkel voor hun
- *        gTLD's .brussels/.vlaanderen), dus hier gebruiken we het klassieke
- *        WHOIS-protocol (poort 43) via een TCP-socket, wat kan dankzij de
- *        cloudflare:sockets runtime-API.
+ * .be  — DNS Belgium biedt geen RDAP aan voor .be zelf, en het klassieke
+ *        WHOIS-protocol (poort 43) draait via ruwe TCP-sockets, die op
+ *        deze Cloudflare Pages-deployment niet bruikbaar bleken (getest
+ *        tegen meerdere onafhankelijke WHOIS-servers, telkens zonder
+ *        resultaat). Tot er een betrouwbaar HTTP-alternatief is, geeft
+ *        deze functie voor .be "available: null" terug; de pagina toont
+ *        dan een link naar de officiële checker van DNS Belgium.
  */
-
-import { connect } from "cloudflare:sockets";
 
 const NAME_PATTERN = /^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$/;
 
@@ -23,33 +24,6 @@ export async function onRequestGet(context) {
       { error: "Ongeldige domeinnaam. Gebruik enkel letters, cijfers en koppeltekens." },
       400
     );
-  }
-
-  if (url.searchParams.get("wtest") === "1") {
-    try {
-      const text = await whoisQuery("whois.verisign-grs.com", 43, `domain ${name}.com`);
-      return jsonResponse({ wtest: true, len: text.length, sample: text.slice(0, 500) });
-    } catch (err) {
-      return jsonResponse({ wtest: true, error: `${err.name}: ${err.message}` });
-    }
-  }
-
-  if (url.searchParams.get("wtest") === "2") {
-    try {
-      const text = await whoisQuery("example.com", 80, "GET / HTTP/1.0\r\nHost: example.com\r\n");
-      return jsonResponse({ wtest: 2, len: text.length, sample: text.slice(0, 300) });
-    } catch (err) {
-      return jsonResponse({ wtest: 2, error: `${err.name}: ${err.message}` });
-    }
-  }
-
-  if (url.searchParams.get("wtest") === "3") {
-    try {
-      const text = await whoisQuery("whois.iana.org", 43, "be");
-      return jsonResponse({ wtest: 3, len: text.length, sample: text.slice(0, 400) });
-    } catch (err) {
-      return jsonResponse({ wtest: 3, error: `${err.name}: ${err.message}` });
-    }
   }
 
   const [be, com] = await Promise.all([checkBe(name), checkCom(name)]);
@@ -72,23 +46,7 @@ async function checkCom(name) {
 }
 
 async function checkBe(name) {
-  const domain = `${name}.be`;
-  try {
-    const text = await whoisQuery("whois.dns.be", 43, domain);
-    const match = text.match(/Status:\s*(NOT AVAILABLE|AVAILABLE)/i);
-    if (!match) return { domain, available: null, debug: { len: text.length, sample: text.slice(0, 300) } };
-    return { domain, available: match[1].toUpperCase() === "AVAILABLE" };
-  } catch (err) {
-    return { domain, available: null, debug: { error: `${err.name}: ${err.message}` } };
-  }
-}
-
-async function whoisQuery(hostname, port, query) {
-  const socket = connect({ hostname, port });
-  const writer = socket.writable.getWriter();
-  await writer.write(new TextEncoder().encode(`${query}\r\n`));
-  await writer.close();
-  return await new Response(socket.readable).text();
+  return { domain: `${name}.be`, available: null };
 }
 
 function jsonResponse(data, status = 200) {
