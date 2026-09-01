@@ -2,34 +2,27 @@
  * Cloudflare Pages Function: domeinnaam-beschikbaarheid checken
  * URL: /api/domain-check?name=voorbeeld
  *
- * .com — via de publieke RDAP-dienst van Verisign (opvolger van WHOIS),
- *        gratis en zonder key.
- * .be  — DNS Belgium biedt geen RDAP aan voor .be zelf, en het klassieke
- *        WHOIS-protocol (poort 43) draait via ruwe TCP-sockets die op deze
- *        Cloudflare Pages-deployment niet bruikbaar bleken. Daarom via de
- *        WhoisXML Domain Availability API (HTTP/JSON, geen TCP nodig).
- *        Vereist de omgevingsvariabele WHOISXML_API_KEY in Cloudflare Pages
- *        (Settings → Environment variables). Zonder key: available: null.
+ * .com — live via de publieke RDAP-dienst van Verisign (opvolger van
+ *        WHOIS), gratis en zonder key.
+ * .be  — DNS Belgium biedt geen RDAP aan voor .be zelf. Het klassieke
+ *        WHOIS-protocol (poort 43) via ruwe TCP-sockets bleek niet bruikbaar
+ *        op deze Cloudflare Pages-deployment, en een betaalde WHOIS-API
+ *        (WhoisXML) gaf voor .be onbetrouwbare resultaten. Daarom geeft
+ *        deze functie voor .be altijd available: null terug; de pagina
+ *        linkt in dat geval door naar de officiële checker van DNS
+ *        Belgium.
  *
- * Bescherming van het .be-quotum (500 calls/maand bij WhoisXML):
- *  1. Enkel aanvragen die effectief van it-mike.be zelf komen (Origin/
- *     Referer-check) — blokkeert rechtstreekse curl/script-aanroepen en
- *     inbedding vanaf andere sites.
- *  2. Resultaten worden 10 minuten gecached per naam via Cloudflare's Cache
- *     API — herhaalde checks van dezelfde naam kosten geen extra call.
- *  3. Per IP max. 5 .be-opzoekingen/uur en globaal max. 15/dag, bijgehouden
- *     in een KV-namespace (binding RATE_LIMIT_KV). Zonder die binding wordt
- *     deze stap overgeslagen — de rest blijft gewoon werken.
+ * Bescherming tegen misbruik: enkel aanvragen die effectief van
+ * it-mike.be zelf komen (Origin/Referer-check) worden aanvaard, en
+ * resultaten worden 10 minuten gecached per naam via Cloudflare's Cache API.
  */
 
 const NAME_PATTERN = /^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$/;
 const ALLOWED_HOSTS = ["it-mike.be", "www.it-mike.be"];
 const CACHE_TTL_SECONDS = 600;
-const BE_HOURLY_IP_CAP = 5;
-const BE_DAILY_GLOBAL_CAP = 15;
 
 export async function onRequestGet(context) {
-  const { request, env } = context;
+  const { request } = context;
   const url = new URL(request.url);
 
   if (!isAllowedOrigin(request)) {
@@ -51,25 +44,18 @@ export async function onRequestGet(context) {
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
 
-  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
-  const limited = await isRateLimited(env, ip);
-
-  const [be, com] = await Promise.all([
-    limited ? Promise.resolve({ domain: `${name}.be`, available: null }) : checkBe(name, env.WHOISXML_API_KEY),
-    checkCom(name),
-  ]);
+  const com = await checkCom(name);
+  const be = { domain: `${name}.be`, available: null };
 
   const payload = JSON.stringify({ name, results: { be, com } });
 
-  if (!limited) {
-    const cacheable = new Response(payload, {
-      headers: {
-        "Content-Type": "application/json",
-        "Cache-Control": `public, max-age=${CACHE_TTL_SECONDS}`,
-      },
-    });
-    context.waitUntil(cache.put(cacheKey, cacheable));
-  }
+  const cacheable = new Response(payload, {
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": `public, max-age=${CACHE_TTL_SECONDS}`,
+    },
+  });
+  context.waitUntil(cache.put(cacheKey, cacheable));
 
   return new Response(payload, {
     headers: { "Content-Type": "application/json", "Cache-Control": "no-store" },
@@ -92,31 +78,6 @@ function isAllowedOrigin(request) {
   return false;
 }
 
-async function isRateLimited(env, ip) {
-  if (!env.RATE_LIMIT_KV) return false;
-
-  const now = new Date();
-  const day = now.toISOString().slice(0, 10);
-  const hour = now.toISOString().slice(0, 13);
-  const globalKey = `be:global:${day}`;
-  const ipKey = `be:ip:${ip}:${hour}`;
-
-  const [globalCount, ipCount] = await Promise.all([
-    env.RATE_LIMIT_KV.get(globalKey),
-    env.RATE_LIMIT_KV.get(ipKey),
-  ]);
-
-  if (parseInt(globalCount || "0", 10) >= BE_DAILY_GLOBAL_CAP) return true;
-  if (parseInt(ipCount || "0", 10) >= BE_HOURLY_IP_CAP) return true;
-
-  await Promise.all([
-    env.RATE_LIMIT_KV.put(globalKey, String(parseInt(globalCount || "0", 10) + 1), { expirationTtl: 86400 }),
-    env.RATE_LIMIT_KV.put(ipKey, String(parseInt(ipCount || "0", 10) + 1), { expirationTtl: 3600 }),
-  ]);
-
-  return false;
-}
-
 async function checkCom(name) {
   const domain = `${name}.com`;
   try {
@@ -128,39 +89,6 @@ async function checkCom(name) {
     return { domain, available: null };
   } catch (err) {
     return { domain, available: null };
-  }
-}
-
-async function checkBe(name, apiKey) {
-  const domain = `${name}.be`;
-  if (!apiKey) return { domain, available: null, debug: "no-api-key" };
-
-  try {
-    const params = new URLSearchParams({
-      apiKey,
-      domainName: domain,
-      outputFormat: "JSON",
-      credits: "DA",
-      mode: "DNS_AND_WHOIS",
-    });
-    const res = await fetch(`https://domain-availability.whoisxmlapi.com/api/v1?${params}`);
-    const bodyText = await res.text();
-    if (!res.ok) return { domain, available: null, debug: { httpStatus: res.status, body: bodyText.slice(0, 300) } };
-
-    let data;
-    try {
-      data = JSON.parse(bodyText);
-    } catch (e) {
-      return { domain, available: null, debug: { parseError: bodyText.slice(0, 300) } };
-    }
-    const status = (data.domainAvailability || data.DomainInfo?.domainAvailability || "")
-      .toUpperCase();
-
-    if (status === "AVAILABLE") return { domain, available: true };
-    if (status === "UNAVAILABLE") return { domain, available: false };
-    return { domain, available: null, debug: { unexpectedShape: JSON.stringify(data).slice(0, 300) } };
-  } catch (err) {
-    return { domain, available: null, debug: { error: `${err.name}: ${err.message}` } };
   }
 }
 

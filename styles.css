@@ -1466,7 +1466,8 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
 }
 .dcr-domain { font-size: 1.05rem; }
 .dcr-status { font-weight: 500; color: var(--muted); margin-right: auto; }
-.dcr-request { padding: 0.6rem 1.1rem; font-size: 0.85rem; }
+.dcr-status-muted { font-weight: 400; font-size: 0.9rem; }
+.dcr-request, .dcr-external { padding: 0.6rem 1.1rem; font-size: 0.85rem; }
 .domeincheck-result.is-available { border-color: #2DD37C; }
 .domeincheck-result.is-available .dcr-status { color: #1E9E5C; }
 .domeincheck-result.is-taken .dcr-status { color: #C4372E; }
