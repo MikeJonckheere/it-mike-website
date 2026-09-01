@@ -1,31 +1,43 @@
 {
-  "hero_location": "Ardooie — Lichtervelde — West-Vlaanderen",
-  "hero_subtitle": "Computer herstel, snelle helpdesk, serverbeheer en IT-consultancy — voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.",
-  "hero_lede": "Geen callcenters, geen tickets in een wachtrij. Direct contact met Mike — voor computerherstel, IT-support, serverbeheer en eerlijk advies.",
-  "about_1": "Ik ben Mike Jonckheere, oprichter van IT-Mike. Met jarenlange ervaring in IT-support, serverbeheer en consultancy help ik particulieren en bedrijven om hun IT vlot en veilig te laten werken.",
   "about_2": "Geen callcenter, geen wachtrijen — gewoon direct contact met de persoon die het oplost. Snel, duidelijk en zonder technisch jargon.",
-  "profile_media": "",
-  "contact_phone": "+32496797671",
-  "contact_email": "mike@it-mike.be",
-  "contact_sub": "Ik reageer snel en kom graag langs voor een vrijblijvend gesprek.",
-  "d1_title": "Computer Herstel & IT-Support",
-  "d1_desc": "Computer traag, vastgelopen of stuk? Ik herstel het. Remote of ter plaatse, snel en zonder gedoe. Voor particulieren en bedrijven die niet kunnen wachten.",
-  "d1_points": ["Computer herstel", "Remote support", "Windows / Mac", "Printers & randapparatuur"],
-  "d2_title": "Website bouwen & fotografie",
-  "d2_desc": "Een website op maat, mét professionele foto's en portretten — zodat klanten én AI-assistenten u meteen vinden.",
-  "d2_points": ["Website op maat", "Bedrijfsfotografie & portretten", "Vindbaar in Google én AI", "Snel online, geen gedoe"],
-  "d3_title": "IT-Consultancy",
-  "d3_desc": "Welke richting moet uw IT op? Ik analyseer uw huidige situatie en geef helder, eerlijk advies — zonder verkooppraatjes.",
-  "d3_points": ["IT-audit", "Strategisch advies", "Kostenoptimalisatie", "Projectbegeleiding"],
-  "d4_title": "Hardware & installaties",
   "d4_desc": "Van nieuwe werkpost tot volledige serverruimte — ik installeer, configureer en test alles zodat u meteen aan de slag kunt.",
-  "d4_points": ["PC & laptop", "NAS & servers", "Randapparatuur", "On-site installatie"],
-  "stap1_title": "U belt of mailt",
-  "stap1_desc": "Direct contact met mij — geen wachtrij. Korte intake van het probleem of de vraag.",
-  "stap2_title": "Ik analyseer & plan",
-  "stap2_desc": "Remote check of ter plaatse. Een eerlijk plan met duidelijke kost vooraf.",
-  "stap3_title": "Opgelost & opgevolgd",
+  "d3_desc": "Welke richting moet uw IT op? Ik analyseer uw huidige situatie en geef helder, eerlijk advies — zonder verkooppraatjes.",
+  "contact_sub": "Ik reageer snel en kom graag langs voor een vrijblijvend gesprek.",
+  "d2_desc": "Een website op maat, mét professionele foto's en portretten — zodat klanten én AI-assistenten u meteen vinden.",
+  "d1_desc": "Computer traag, vastgelopen of stuk? Ik herstel het. Remote of ter plaatse, snel en zonder gedoe. Voor particulieren en bedrijven die niet kunnen wachten.",
+  "d1_title": "Computer Herstel & IT-Support",
+  "d2_title": "Website bouwen & fotografie",
+  "d3_title": "IT-Consultancy",
+  "d4_title": "Hardware & installaties",
   "stap3_desc": "Probleem opgelost, alles getest. Daarna proactieve opvolging als u dat wenst.",
+  "stap2_desc": "Remote check of ter plaatse. Een eerlijk plan met duidelijke kost vooraf.",
+  "profile_media": "",
+  "stap1_desc": "Direct contact met mij — geen wachtrij. Korte intake van het probleem of de vraag.",
+  "contact_phone": "+32496797671",
+  "d4_points": [
+    "PC & laptop",
+    "NAS & servers",
+    "Randapparatuur",
+    "On-site installatie"
+  ],
+  "d3_points": [
+    "IT-audit",
+    "Strategisch advies",
+    "Kostenoptimalisatie",
+    "Projectbegeleiding"
+  ],
+  "d2_points": [
+    "Website op maat",
+    "Bedrijfsfotografie & portretten",
+    "Vindbaar in Google én AI",
+    "Snel online, geen gedoe"
+  ],
+  "d1_points": [
+    "Computer herstel",
+    "Remote support",
+    "Windows / Mac",
+    "Printers & randapparatuur"
+  ],
   "over_checks": [
     "Computer herstel in heel West-Vlaanderen",
     "Snel ter plaatse of remote",
@@ -78,5 +90,13 @@
       "question": "Wat kost een tussenkomst?",
       "answer": "Ik start met een diagnose-uur (€62,50 excl. BTW) — tenzij het probleem al binnen dat eerste uur opgelost is. Na de diagnose krijgt u een duidelijke inschatting van wat er nodig is en wat het kost, vóór ik verderga. Geen verrassingen achteraf."
     }
-  ]
+  ],
+  "stap1_title": "U belt of mailt",
+  "hero_location": "Ardooie — West-Vlaanderen",
+  "stap2_title": "Ik analyseer & plan",
+  "stap3_title": "Opgelost & opgevolgd",
+  "hero_subtitle": "Computer herstel, snelle helpdesk, serverbeheer en IT-consultancy — voor particulieren en bedrijven. Persoonlijk, betrouwbaar en direct bereikbaar.",
+  "contact_email": "mike@it-mike.be",
+  "hero_lede": "Geen callcenters, geen tickets in een wachtrij. Direct contact met Mike — voor computerherstel, IT-support, serverbeheer en eerlijk advies.",
+  "about_1": "Ik ben Mike Jonckheere, oprichter van IT-Mike. Met jarenlange ervaring in IT-support, serverbeheer en consultancy help ik particulieren en bedrijven om hun IT vlot en veilig te laten werken."
 }
