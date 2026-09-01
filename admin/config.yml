@@ -190,16 +190,73 @@ collections:
                 widget: "text"
 
       - name: "website-bouwen"
-        label: "Website Bouwen — Foto's"
+        label: "Website Bouwen pagina"
         file: "content/website-bouwen.json"
         format: "json"
         fields:
+
+          # ── HERO ──────────────────────────────────────────
+          - label: "💬 Hero subtekst"
+            name: "hero_sub"
+            widget: "text"
+            hint: "De zin onder de titel 'Geen tijd voor een website? Ik wel.'"
+
+          # ── VOOR WIE ──────────────────────────────────────
+          - label: "💬 Voor wie — subtekst"
+            name: "voorwie_sub"
+            widget: "text"
+
+          # ── WAT JE KRIJGT ─────────────────────────────────
+          - label: "💬 Wat u krijgt — subtekst"
+            name: "wat_sub"
+            widget: "text"
+
+          - label: "🔧 Feature 1 — Titel"
+            name: "f1_title"
+            widget: "string"
+          - label: "🔧 Feature 1 — Omschrijving"
+            name: "f1_desc"
+            widget: "text"
+
+          - label: "📷 Feature 2 — Titel"
+            name: "f2_title"
+            widget: "string"
+          - label: "📷 Feature 2 — Omschrijving"
+            name: "f2_desc"
+            widget: "text"
+
+          - label: "🔍 Feature 3 — Titel"
+            name: "f3_title"
+            widget: "string"
+          - label: "🔍 Feature 3 — Omschrijving"
+            name: "f3_desc"
+            widget: "text"
+
+          - label: "⚡ Feature 4 — Titel"
+            name: "f4_title"
+            widget: "string"
+          - label: "⚡ Feature 4 — Omschrijving"
+            name: "f4_desc"
+            widget: "text"
+
+          # ── AI-VINDBAARHEID ───────────────────────────────
+          - label: "💬 AI-vindbaarheid — subtekst"
+            name: "ai_sub"
+            widget: "text"
+          - label: "💬 AI-vindbaarheid — bewijs-quote"
+            name: "ai_proof"
+            widget: "text"
+
+          # ── FOTOGRAFIE ────────────────────────────────────
+          - label: "💬 Fotografie — subtekst"
+            name: "foto_sub"
+            widget: "text"
 
           - label: "📸 Foto's (bedrijfsfotografie & portretten)"
             name: "photos"
             widget: "list"
             label_singular: "Foto"
-            hint: "Foto's voor de fotografie-sectie op /website-bouwen/. Zolang hier geen foto's staan, tonen we plaatshouders."
+            hint: "Foto's voor de fotografie-sectie op /website-bouwen/. Geen vast aantal — voeg er zoveel toe als je wil (1, 3, 10...). Zolang hier geen foto's staan, tonen we plaatshouders. Sleep aan het ≡-icoontje bovenaan elke foto om de volgorde te wijzigen."
             required: false
             fields:
               - label: "Foto"
@@ -209,3 +266,8 @@ collections:
                 name: "caption"
                 widget: "string"
                 default: "Bedrijfsfotografie"
+
+          # ── CONTACT ───────────────────────────────────────
+          - label: "💬 Contact — subtekst"
+            name: "contact_sub"
+            widget: "text"
