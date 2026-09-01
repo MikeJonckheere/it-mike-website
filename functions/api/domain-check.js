@@ -25,6 +25,15 @@ export async function onRequestGet(context) {
     );
   }
 
+  if (url.searchParams.get("wtest") === "1") {
+    try {
+      const text = await whoisQuery("whois.verisign-grs.com", 43, `domain ${name}.com`);
+      return jsonResponse({ wtest: true, len: text.length, sample: text.slice(0, 500) });
+    } catch (err) {
+      return jsonResponse({ wtest: true, error: `${err.name}: ${err.message}` });
+    }
+  }
+
   const [be, com] = await Promise.all([checkBe(name), checkCom(name)]);
 
   return jsonResponse({ name, results: { be, com } });
