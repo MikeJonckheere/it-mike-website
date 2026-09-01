@@ -34,6 +34,15 @@ export async function onRequestGet(context) {
     }
   }
 
+  if (url.searchParams.get("wtest") === "2") {
+    try {
+      const text = await whoisQuery("example.com", 80, "GET / HTTP/1.0\r\nHost: example.com\r\n");
+      return jsonResponse({ wtest: 2, len: text.length, sample: text.slice(0, 300) });
+    } catch (err) {
+      return jsonResponse({ wtest: 2, error: `${err.name}: ${err.message}` });
+    }
+  }
+
   const [be, com] = await Promise.all([checkBe(name), checkCom(name)]);
 
   return jsonResponse({ name, results: { be, com } });
