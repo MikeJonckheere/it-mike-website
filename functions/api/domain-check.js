@@ -2,15 +2,14 @@
  * Cloudflare Pages Function: domeinnaam-beschikbaarheid checken
  * URL: /api/domain-check?name=voorbeeld
  *
- * Controleert of "voorbeeld.be" en "voorbeeld.com" nog vrij zijn via de
- * officiële RDAP-diensten van DNS Belgium en Verisign (opvolger van WHOIS).
- * Geen API-key nodig — RDAP is publiek en open.
+ * .com — via de publieke RDAP-dienst van Verisign (opvolger van WHOIS).
+ * .be  — DNS Belgium biedt geen RDAP aan voor .be zelf (enkel voor hun
+ *        gTLD's .brussels/.vlaanderen), dus hier gebruiken we het klassieke
+ *        WHOIS-protocol (poort 43) via een TCP-socket, wat kan dankzij de
+ *        cloudflare:sockets runtime-API.
  */
 
-const RDAP_ENDPOINTS = {
-  be: (domain) => `https://rdap.dnsbelgium.be/domain/${domain}`,
-  com: (domain) => `https://rdap.verisign.com/com/v1/domain/${domain}`,
-};
+import { connect } from "cloudflare:sockets";
 
 const NAME_PATTERN = /^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$/;
 
@@ -26,30 +25,54 @@ export async function onRequestGet(context) {
     );
   }
 
-  const tlds = Object.keys(RDAP_ENDPOINTS);
-  const checks = await Promise.all(tlds.map((tld) => checkTld(name, tld)));
+  const [be, com] = await Promise.all([checkBe(name), checkCom(name)]);
 
-  const results = {};
-  tlds.forEach((tld, i) => {
-    results[tld] = checks[i];
-  });
-
-  return jsonResponse({ name, results });
+  return jsonResponse({ name, results: { be, com } });
 }
 
-async function checkTld(name, tld) {
-  const domain = `${name}.${tld}`;
+async function checkCom(name) {
+  const domain = `${name}.com`;
   try {
-    const res = await fetch(RDAP_ENDPOINTS[tld](domain), {
+    const res = await fetch(`https://rdap.verisign.com/com/v1/domain/${domain}`, {
       headers: { accept: "application/rdap+json" },
     });
-
     if (res.status === 404) return { domain, available: true };
     if (res.status === 200) return { domain, available: false };
     return { domain, available: null };
   } catch (err) {
     return { domain, available: null };
   }
+}
+
+async function checkBe(name) {
+  const domain = `${name}.be`;
+  try {
+    const text = await whoisQuery("whois.dns.be", 43, domain);
+    const match = text.match(/Status:\s*(NOT AVAILABLE|AVAILABLE)/i);
+    if (!match) return { domain, available: null };
+    return { domain, available: match[1].toUpperCase() === "AVAILABLE" };
+  } catch (err) {
+    return { domain, available: null };
+  }
+}
+
+async function whoisQuery(hostname, port, query) {
+  const socket = connect({ hostname, port });
+  const writer = socket.writable.getWriter();
+  await writer.write(new TextEncoder().encode(`${query}\r\n`));
+  await writer.close();
+
+  const reader = socket.readable.getReader();
+  const decoder = new TextDecoder();
+  let text = "";
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    text += decoder.decode(value, { stream: true });
+  }
+
+  await socket.close();
+  return text;
 }
 
 function jsonResponse(data, status = 200) {
