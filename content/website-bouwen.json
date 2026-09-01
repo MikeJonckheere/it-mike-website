@@ -1,7 +1,22 @@
 {
+  "hero_sub": "U bent op de werf, niet achter een scherm. Ik bouw uw website, maak er professionele foto's bij, en zorg dat klanten — én AI-assistenten zoals ChatGPT — u meteen vinden.",
+  "voorwie_sub": "Loodgieter, elektricien, aannemer, schrijnwerker, tuinaannemer, dakwerker — herkenbaar? U krijgt genoeg klanten via mond-tot-mondreclame, maar wie u googelt (of aan ChatGPT vraagt) vindt niets, of erger: de verkeerde concurrent.",
+  "wat_sub": "Geen aparte fotograaf, geen aparte webbouwer, geen technisch gedoe. Eén aanspreekpunt, van foto tot livegang.",
+  "f1_title": "Website op maat",
+  "f1_desc": "Snel, mobielvriendelijk en overzichtelijk. Geen dure sjablonen — een site die er professioneel uitziet én duidelijk maakt wat u doet.",
+  "f2_title": "Bedrijfsfotografie & portretten",
+  "f2_desc": "Ik kom langs en maak zelf de foto's — van u aan het werk tot een professioneel portret. Echte beelden in plaats van stockfoto's die iedereen gebruikt.",
+  "f3_title": "Vindbaar in Google én AI",
+  "f3_desc": "Uw site wordt zo gebouwd dat zoekmachines én AI-assistenten (ChatGPT, Copilot, Gemini) begrijpen wie u bent en wat u doet — en u aanraden.",
+  "f4_title": "Snel online, geen gedoe",
+  "f4_desc": "Rechtstreeks contact met mij — geen callcenter, geen wachttijd van weken. Duidelijke prijs vooraf, snel resultaat.",
+  "ai_sub": "\"Zoek een goede loodgieter in Roeselare\" — steeds meer mensen typen dat niet in Google, maar vragen het aan ChatGPT of een andere AI-assistent. Die AI geeft enkel antwoord op basis van websites die ze goed kan lezen: heldere teksten, juiste structuur, correcte bedrijfsgegevens.",
+  "ai_proof": "Deze IT-Mike website is zelf zo gebouwd — met gestructureerde data die zoekmachines én AI direct begrijpen. Precies dezelfde aanpak gebruik ik voor uw website.",
+  "foto_sub": "Een professioneel portret voor op de homepage, actiefoto's op de werf, of beelden van afgewerkt werk — ik maak ze zelf, passend bij uw website.",
+  "contact_sub": "Bel of mail voor een vrijblijvend gesprek — over uw website, de foto's, of gewoon om te horen wat het kost.",
   "photos": [
     {
-      "caption": " Uw oog op detail mag getoond worden.",
+      "caption": "Uw oog op detail mag getoond worden.",
       "image": "fotos/roof.jpg"
     },
     {
