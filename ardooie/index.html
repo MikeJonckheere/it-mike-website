@@ -35,7 +35,33 @@
     {
       "@type": "FAQPage",
       "@id": "https://it-mike.be/ardooie/#faq",
-      "mainEntity": []
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Doet IT-Mike computerherstel en IT-support in Ardooie?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja — IT-Mike (Mike Jonckheere) is zelf gevestigd in Ardooie. Computer herstel, IT-support, serverbeheer, IT-consultancy en hardware-installaties, remote of aan huis, voor particulieren en bedrijven. Reactietijd doorgaans onder de 2 uur, en omdat ik hier zelf woon is een bezoek aan huis in Ardooie meestal het snelst geregeld van heel de regio." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat doet IT-Mike precies?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Computer herstel, IT-support & helpdesk, server- en cloudbeheer, IT-consultancy en hardware-installaties — voor particulieren en bedrijven. Direct contact met mij, geen callcenter." }
+        },
+        {
+          "@type": "Question",
+          "name": "Werkt IT-Mike ook voor bedrijven?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Zeker — van zelfstandigen tot KMO's. Serverbeheer, netwerkbeheer, cloudmigratie of gewoon een helpdesk voor het hele team: allemaal mogelijk, ter plaatse of remote." }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan IT-Mike ook remote helpen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja, voor de meeste problemen is remote support mogelijk via een beveiligde verbinding. Sneller en even effectief als een bezoek ter plaatse, zonder verplaatsingskosten." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat kost een tussenkomst?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ik start met een diagnose-uur (€62,50 excl. BTW) — tenzij het probleem al binnen dat eerste uur opgelost is. Daarna krijgt u een duidelijke prijs vooraf, geen verrassingen achteraf." }
+        }
+      ]
     }
   ]
 }
@@ -99,10 +125,15 @@
     </div>
 
     <h1 class="hero-headline">
-      <span class="line">IT-hulp in</span>
-      <span class="line line-italic">Ardooie.</span>
-      <span class="line line-faded">Vlakbij.</span>
-      <span class="line line-faded">Persoonlijk.</span>
+      <span class="line">IT die</span>
+      <span class="line line-italic rotating" id="rotatingWord" aria-live="polite">
+        <span class="rw-word on">werkt.</span>
+        <span class="rw-word">luistert.</span>
+        <span class="rw-word">uitlegt.</span>
+        <span class="rw-word">klopt.</span>
+      </span>
+      <span class="line line-faded">In Ardooie.</span>
+      <span class="line line-faded">Vlakbij, persoonlijk.</span>
     </h1>
 
     <div class="hero-mascot" aria-hidden="true">
@@ -279,19 +310,23 @@
     <h2 class="section-title">Veelgestelde <em>vragen.</em></h2>
     <div class="faq-list" id="cms-faq-list">
       <details class="faq-item">
-        <summary class="faq-q">Doet IT-Mike computerherstel in Ardooie?</summary>
-        <p class="faq-a">Ja — Ardooie is mijn eigen gemeente. U kan uw toestel binnenbrengen, of ik kom aan huis, wat meestal sneller kan omdat ik er al ben.</p>
+        <summary class="faq-q">Doet IT-Mike computerherstel en IT-support in Ardooie?</summary>
+        <p class="faq-a">Ja — IT-Mike (Mike Jonckheere) is zelf gevestigd in Ardooie. Computer herstel, IT-support, serverbeheer, IT-consultancy en hardware-installaties, remote of aan huis, voor particulieren en bedrijven. Reactietijd doorgaans onder de 2 uur, en omdat ik hier zelf woon is een bezoek aan huis in Ardooie meestal het snelst geregeld van heel de regio.</p>
       </details>
       <details class="faq-item">
-        <summary class="faq-q">Hoe snel is IT-Mike ter plaatse in Ardooie?</summary>
-        <p class="faq-a">Doorgaans binnen de 2 uur voor dringende problemen, vaak dezelfde dag nog. Omdat ik zelf in Ardooie woon, is een bezoek aan huis hier meestal het snelst geregeld.</p>
+        <summary class="faq-q">Wat doet IT-Mike precies?</summary>
+        <p class="faq-a">Computer herstel, IT-support &amp; helpdesk, server- en cloudbeheer, IT-consultancy en hardware-installaties — voor particulieren en bedrijven. Direct contact met mij, geen callcenter.</p>
       </details>
       <details class="faq-item">
-        <summary class="faq-q">Werkt IT-Mike ook voor bedrijven in Ardooie?</summary>
+        <summary class="faq-q">Werkt IT-Mike ook voor bedrijven?</summary>
         <p class="faq-a">Zeker — van zelfstandigen tot KMO's. Serverbeheer, netwerkbeheer, cloudmigratie of gewoon een helpdesk voor het hele team: allemaal mogelijk, ter plaatse of remote.</p>
       </details>
       <details class="faq-item">
-        <summary class="faq-q">Wat kost een tussenkomst in Ardooie?</summary>
+        <summary class="faq-q">Kan IT-Mike ook remote helpen?</summary>
+        <p class="faq-a">Ja, voor de meeste problemen is remote support mogelijk via een beveiligde verbinding. Sneller en even effectief als een bezoek ter plaatse, zonder verplaatsingskosten.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Wat kost een tussenkomst?</summary>
         <p class="faq-a">Ik start met een diagnose-uur (€62,50 excl. BTW) — tenzij het probleem al binnen dat eerste uur opgelost is. Daarna krijgt u een duidelijke prijs vooraf, geen verrassingen achteraf.</p>
       </details>
     </div>
@@ -360,6 +395,17 @@ var navbar = document.getElementById('navbar');
 window.addEventListener('scroll', function() {
   navbar.classList.toggle('scrolled', window.scrollY > 24);
 });
+
+// Rotating word
+(function() {
+  var words = document.querySelectorAll('#rotatingWord .rw-word');
+  var i = 0;
+  setInterval(function() {
+    words[i].classList.remove('on');
+    i = (i + 1) % words.length;
+    words[i].classList.add('on');
+  }, 2400);
+})();
 
 // Mobile menu
 var mobileMenu = document.getElementById('mobileMenu');

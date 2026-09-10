@@ -9,19 +9,23 @@
   ],
   "faq": [
     {
-      "question": "Doet IT-Mike computerherstel in Ardooie?",
-      "answer": "Ja — Ardooie is mijn eigen gemeente. U kan uw toestel binnenbrengen, of ik kom aan huis, wat meestal sneller kan omdat ik er al ben."
+      "question": "Doet IT-Mike computerherstel en IT-support in Ardooie?",
+      "answer": "Ja — IT-Mike (Mike Jonckheere) is zelf gevestigd in Ardooie. Computer herstel, IT-support, serverbeheer, IT-consultancy en hardware-installaties, remote of aan huis, voor particulieren en bedrijven. Reactietijd doorgaans onder de 2 uur, en omdat ik hier zelf woon is een bezoek aan huis in Ardooie meestal het snelst geregeld van heel de regio."
     },
     {
-      "question": "Hoe snel is IT-Mike ter plaatse in Ardooie?",
-      "answer": "Doorgaans binnen de 2 uur voor dringende problemen, vaak dezelfde dag nog. Omdat ik zelf in Ardooie woon, is een bezoek aan huis hier meestal het snelst geregeld."
+      "question": "Wat doet IT-Mike precies?",
+      "answer": "Computer herstel, IT-support & helpdesk, server- en cloudbeheer, IT-consultancy en hardware-installaties — voor particulieren en bedrijven. Direct contact met mij, geen callcenter."
     },
     {
-      "question": "Werkt IT-Mike ook voor bedrijven in Ardooie?",
+      "question": "Werkt IT-Mike ook voor bedrijven?",
       "answer": "Zeker — van zelfstandigen tot KMO's. Serverbeheer, netwerkbeheer, cloudmigratie of gewoon een helpdesk voor het hele team: allemaal mogelijk, ter plaatse of remote."
     },
     {
-      "question": "Wat kost een tussenkomst in Ardooie?",
+      "question": "Kan IT-Mike ook remote helpen?",
+      "answer": "Ja, voor de meeste problemen is remote support mogelijk via een beveiligde verbinding. Sneller en even effectief als een bezoek ter plaatse, zonder verplaatsingskosten."
+    },
+    {
+      "question": "Wat kost een tussenkomst?",
       "answer": "Ik start met een diagnose-uur (€62,50 excl. BTW) — tenzij het probleem al binnen dat eerste uur opgelost is. Daarna krijgt u een duidelijke prijs vooraf, geen verrassingen achteraf."
     }
   ]
