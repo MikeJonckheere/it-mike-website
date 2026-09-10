@@ -1,0 +1,32 @@
+{
+  "hero_lede": "Ook in Pittem ben ik snel inzetbaar voor IT-hulp — vanuit Ardooie ben ik er in een handomdraai. Computerherstel, IT-support, serverbeheer en eerlijk advies, zonder callcenter of wachtrij.",
+  "intro_sub": "Pittem is voor mij geen verre uitstap: ik ken de streek, en ik ben er snel ter plaatse voor particulieren én de lokale zelfstandigen en bedrijven. Van een simpele software-fix tot een volledige IT-inrichting.",
+  "checks": [
+    "Snel ter plaatse in en rond Pittem",
+    "Reactietijd doorgaans onder de 2 uur",
+    "Remote of aan huis",
+    "Voor particulieren én bedrijven"
+  ],
+  "faq": [
+    {
+      "question": "Doet IT-Mike computerherstel en IT-support in Pittem?",
+      "answer": "Ja — ik ken de streek rond Pittem goed en ben er snel ter plaatse vanuit mijn thuisbasis Ardooie. Computer herstel, IT-support, serverbeheer, IT-consultancy en hardware-installaties, remote of aan huis, voor particulieren en bedrijven. Reactietijd doorgaans onder de 2 uur."
+    },
+    {
+      "question": "Wat kan ik allemaal aan IT-Mike vragen?",
+      "answer": "Alles van een vastgelopen computer tot een volledige serverinrichting: computer herstel, IT-support, server- en cloudbeheer, consultancy en hardware-installaties. Rechtstreeks bij mij, geen tussenpersoon."
+    },
+    {
+      "question": "Werkt IT-Mike ook samen met lokale bedrijven?",
+      "answer": "Jazeker — van eenmanszaak tot KMO. Netwerkbeheer, serverbeheer, cloudmigratie of gewoon een aanspreekpunt voor IT-vragen, ter plaatse of op afstand."
+    },
+    {
+      "question": "Gaat het ook op afstand, zonder dat u langskomt?",
+      "answer": "In de meeste gevallen wel — via een veilige remote verbinding, vaak nog sneller dan een bezoek ter plaatse."
+    },
+    {
+      "question": "Wat betaal ik voor een tussenkomst?",
+      "answer": "Een diagnose-uur kost €62,50 excl. BTW. Is het probleem sneller opgelost, dan betaalt u ook minder. Nadien altijd een duidelijke prijsafspraak vooraf."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "hero_lede": "Lichtervelde ligt op een boogscheut van mijn thuisbasis in Ardooie — meestal ben ik er binnen enkele minuten. Computerherstel, IT-support, serverbeheer en eerlijk advies, zonder callcenter of wachtrij.",
+  "intro_sub": "Van Ardooie naar Lichtervelde is voor mij een kort ritje, geen verplaatsing die een halve dag kost. Trage laptop, netwerkpanne of een volledige serverinstallatie: ik ben er snel bij, of los het meteen op via een beveiligde remote verbinding.",
+  "checks": [
+    "Op minuten van Ardooie",
+    "Reactietijd doorgaans onder de 2 uur",
+    "Remote of aan huis",
+    "Voor particulieren én bedrijven"
+  ],
+  "faq": [
+    {
+      "question": "Doet IT-Mike computerherstel en IT-support in Lichtervelde?",
+      "answer": "Ja — Lichtervelde ligt vlak bij mijn thuisbasis in Ardooie, dus ik ben er doorgaans snel ter plaatse. Computer herstel, IT-support, serverbeheer, IT-consultancy en hardware-installaties, remote of aan huis, voor particulieren en bedrijven. Reactietijd doorgaans onder de 2 uur."
+    },
+    {
+      "question": "Kan ik bij IT-Mike terecht voor IT-support?",
+      "answer": "Zeker — computer herstel, helpdesk, server- en cloudbeheer, IT-consultancy en hardware-installaties, voor particulieren en van zelfstandigen tot bedrijven. Altijd rechtstreeks contact met mij, nooit een callcenter."
+    },
+    {
+      "question": "Helpt IT-Mike ook bedrijven en zelfstandigen?",
+      "answer": "Ja — van eenmanszaken tot KMO's. Denk aan serverbeheer, netwerken, cloudmigratie of een vaste helpdesk voor het team, ter plaatse of op afstand."
+    },
+    {
+      "question": "Is remote hulp ook mogelijk?",
+      "answer": "Voor de meeste problemen wel, via een beveiligde verbinding. Vaak sneller dan wachten op een bezoek, en zonder extra kosten voor verplaatsing."
+    },
+    {
+      "question": "Hoeveel kost een interventie?",
+      "answer": "Ik start met een diagnose-uur van €62,50 excl. BTW, tenzij alles al binnen dat uur is opgelost. Daarna volgt een heldere prijs, vooraf afgesproken."
+    }
+  ]
+}
