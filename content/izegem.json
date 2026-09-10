@@ -1,0 +1,32 @@
+{
+  "hero_lede": "Izegem heeft heel wat zelfstandigen en bedrijven — en die kunnen bij mij terecht voor snelle, persoonlijke IT-hulp. Computerherstel, IT-support, serverbeheer en eerlijk advies, zonder callcenter of wachtrij.",
+  "intro_sub": "Van eenmanszaak tot productiebedrijf: Izegem telt heel wat ondernemers die op hun IT moeten kunnen rekenen. Ik help zowel bedrijven als particulieren, met dezelfde persoonlijke aanpak — snel ter plaatse of via een veilige remote verbinding.",
+  "checks": [
+    "Ervaring met KMO's en zelfstandigen",
+    "Reactietijd doorgaans onder de 2 uur",
+    "Remote of aan huis",
+    "Voor particulieren én bedrijven"
+  ],
+  "faq": [
+    {
+      "question": "Doet IT-Mike computerherstel en IT-support in Izegem?",
+      "answer": "Ja — ik help zowel particulieren als bedrijven in Izegem, van een vastgelopen laptop tot serverbeheer voor een volledig team. Computer herstel, IT-support, serverbeheer, IT-consultancy en hardware-installaties, remote of aan huis. Reactietijd doorgaans onder de 2 uur."
+    },
+    {
+      "question": "Kan IT-Mike de IT van mijn bedrijf beheren?",
+      "answer": "Ja — serverbeheer, netwerken, back-up, Microsoft 365 en meer. Ik neem het proactief op, zodat problemen liever voorkomen dan opgelost worden."
+    },
+    {
+      "question": "Is IT-Mike er ook voor particulieren, niet enkel bedrijven?",
+      "answer": "Absoluut. Een trage computer, een printerprobleem of hulp bij nieuwe apparatuur — iedereen kan bij mij terecht."
+    },
+    {
+      "question": "Werkt u ook op afstand?",
+      "answer": "Ja, via een beveiligde remote verbinding kan ik de meeste problemen meteen aanpakken, zonder dat u hoeft te wachten op een bezoek."
+    },
+    {
+      "question": "Hoeveel kost dat ongeveer?",
+      "answer": "Een diagnose-uur is €62,50 excl. BTW. Nadien krijgt u altijd eerst een duidelijke prijs, voor ik verderga."
+    }
+  ]
+}

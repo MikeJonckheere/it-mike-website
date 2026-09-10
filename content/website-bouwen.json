@@ -17,15 +17,15 @@
   "photos": [
     {
       "caption": "Uw oog op detail mag getoond worden.",
-      "image": "fotos/roof.jpg"
+      "image": "fotos/roof.webp"
     },
     {
       "caption": "Uw specialisatie mag in de kijker staan.",
-      "image": "fotos/fortigate.jpg"
+      "image": "fotos/fortigate.webp"
     },
     {
       "caption": "Een persoonlijke toets werkt wonderen.",
-      "image": "fotos/web-demo1.jpg"
+      "image": "fotos/web-demo1.webp"
     }
   ]
 }

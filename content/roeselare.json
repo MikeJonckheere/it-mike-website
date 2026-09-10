@@ -1,0 +1,32 @@
+{
+  "hero_lede": "Roeselare is het kloppend hart van de regio — en ook daar bent u bij mij aan het juiste adres voor IT-hulp. Computerherstel, IT-support, serverbeheer en eerlijk advies, zonder callcenter of wachtrij.",
+  "intro_sub": "Roeselare is de grootste stad in mijn actiegebied, met tal van kantoren, zelfstandigen en gezinnen die op hun IT moeten kunnen bouwen. Ik combineer de persoonlijke aanpak van een lokale zelfstandige met de kennis die een bedrijf nodig heeft.",
+  "checks": [
+    "Ook voor kantoren en grotere teams",
+    "Reactietijd doorgaans onder de 2 uur",
+    "Remote of aan huis",
+    "Voor particulieren én bedrijven"
+  ],
+  "faq": [
+    {
+      "question": "Doet IT-Mike computerherstel en IT-support in Roeselare?",
+      "answer": "Ja — Roeselare is een van de gemeenten waar ik het vaakst over de vloer kom, voor particulieren én bedrijven. Computer herstel, IT-support, serverbeheer, IT-consultancy en hardware-installaties, remote of aan huis. Reactietijd doorgaans onder de 2 uur."
+    },
+    {
+      "question": "Werkt IT-Mike ook voor grotere bedrijven en kantoren?",
+      "answer": "Ja — van een klein kantoor tot een team van tientallen medewerkers. Serverbeheer, netwerkbeheer, back-up en Microsoft 365, allemaal met dezelfde persoonlijke opvolging."
+    },
+    {
+      "question": "En voor particulieren, kan ik ook terecht?",
+      "answer": "Natuurlijk. Van een trage pc tot hulp bij het instellen van nieuwe toestellen — iedereen is welkom, groot of klein probleem."
+    },
+    {
+      "question": "Kan alles remote opgelost worden?",
+      "answer": "Veel wel, via een beveiligde verbinding. Is een bezoek ter plaatse nodig, dan plan ik dat zo snel mogelijk in."
+    },
+    {
+      "question": "Wat is de kostprijs van een tussenkomst?",
+      "answer": "Ik reken een diagnose-uur van €62,50 excl. BTW aan, tenzij het probleem sneller is opgelost. Daarna spreken we altijd eerst een duidelijke prijs af."
+    }
+  ]
+}
