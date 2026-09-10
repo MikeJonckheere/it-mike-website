@@ -1,0 +1,28 @@
+{
+  "hero_lede": "Ik woon en werk zelf in Ardooie — dus als u hier IT-hulp nodig hebt, ben ik zo goed als altijd vlakbij. Computerherstel, IT-support, serverbeheer en eerlijk advies, zonder callcenter of wachtrij.",
+  "intro_sub": "IT-Mike is gevestigd in Ardooie zelf. Geen technieker die van ver moet komen — voor inwoners en bedrijven van Ardooie ben ik letterlijk in de buurt. Van een trage laptop tot een volledige serverinstallatie: ik kom snel langs, of help remote binnen de kortste keren.",
+  "checks": [
+    "Zelf gevestigd in Ardooie",
+    "Reactietijd doorgaans onder de 2 uur",
+    "Remote of aan huis",
+    "Voor particulieren én bedrijven"
+  ],
+  "faq": [
+    {
+      "question": "Doet IT-Mike computerherstel in Ardooie?",
+      "answer": "Ja — Ardooie is mijn eigen gemeente. U kan uw toestel binnenbrengen, of ik kom aan huis, wat meestal sneller kan omdat ik er al ben."
+    },
+    {
+      "question": "Hoe snel is IT-Mike ter plaatse in Ardooie?",
+      "answer": "Doorgaans binnen de 2 uur voor dringende problemen, vaak dezelfde dag nog. Omdat ik zelf in Ardooie woon, is een bezoek aan huis hier meestal het snelst geregeld."
+    },
+    {
+      "question": "Werkt IT-Mike ook voor bedrijven in Ardooie?",
+      "answer": "Zeker — van zelfstandigen tot KMO's. Serverbeheer, netwerkbeheer, cloudmigratie of gewoon een helpdesk voor het hele team: allemaal mogelijk, ter plaatse of remote."
+    },
+    {
+      "question": "Wat kost een tussenkomst in Ardooie?",
+      "answer": "Ik start met een diagnose-uur (€62,50 excl. BTW) — tenzij het probleem al binnen dat eerste uur opgelost is. Daarna krijgt u een duidelijke prijs vooraf, geen verrassingen achteraf."
+    }
+  ]
+}

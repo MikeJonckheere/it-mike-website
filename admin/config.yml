@@ -276,3 +276,39 @@ collections:
           - label: "💬 Contact — subtekst"
             name: "contact_sub"
             widget: "text"
+
+      - name: "ardooie"
+        label: "Gemeentepagina — Ardooie"
+        file: "content/ardooie.json"
+        format: "json"
+        fields:
+
+          # ── HERO ──────────────────────────────────────────
+          - label: "💬 Hero subtekst"
+            name: "hero_lede"
+            widget: "text"
+            hint: "De zin onder de titel op /ardooie/"
+
+          # ── WAAROM ARDOOIE ────────────────────────────────
+          - label: "💬 'Waarom Ardooie' — tekst"
+            name: "intro_sub"
+            widget: "text"
+
+          - label: "✅ Kenmerken (met vinkje)"
+            name: "checks"
+            widget: "list"
+            label_singular: "Kenmerk"
+
+          # ── FAQ ───────────────────────────────────────────
+          - label: "❓ FAQ — Veelgestelde vragen (Ardooie)"
+            name: "faq"
+            widget: "list"
+            label_singular: "Vraag"
+            hint: "Eigen vragen/antwoorden voor deze pagina — hou ze verschillend van de FAQ op de homepage."
+            fields:
+              - label: "Vraag"
+                name: "question"
+                widget: "string"
+              - label: "Antwoord"
+                name: "answer"
+                widget: "text"
