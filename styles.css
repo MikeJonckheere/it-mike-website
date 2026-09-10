@@ -1337,9 +1337,14 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   .nav-burger { display: flex; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-meta { flex-direction: column; gap: 0.8rem; padding-bottom: 0.8rem; }
+  /* Op 1 kolom hebben headline/mascot/side/foot nog hun expliciete rij van de
+     desktop-grid (2/3/4) — zonder reset hierop past de volledige-breedte
+     mascot nergens meer tussen en valt hij terug naar een nieuwe rij 5, dus
+     onder heel de hero in plaats van ertussenin. Rijen resetten naar auto
+     laat alles gewoon in DOM-volgorde stapelen. */
+  .hero-headline, .hero-mascot, .hero-side, .hero-foot { grid-row: auto; }
   .hero-mascot {
     grid-column: 1 / -1;
-    grid-row: auto;
     max-width: 200px;
     margin: 0 auto;
   }
