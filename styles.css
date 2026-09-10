@@ -242,6 +242,16 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
   font-weight: 500;
 }
 
+.hero-kicker {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: end;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
 .hero-headline {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
@@ -1353,7 +1363,7 @@ em { font-style: italic; font-family: "Big Shoulders Display", "Instrument Serif
      mascot nergens meer tussen en valt hij terug naar een nieuwe rij 5, dus
      onder heel de hero in plaats van ertussenin. Rijen resetten naar auto
      laat alles gewoon in DOM-volgorde stapelen. */
-  .hero-headline, .hero-mascot, .hero-side, .hero-foot { grid-row: auto; }
+  .hero-kicker, .hero-headline, .hero-mascot, .hero-side, .hero-foot { grid-row: auto; }
   .hero-mascot {
     grid-column: 1 / -1;
     max-width: 200px;
