@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-28",
+  "period": "27/10 ochtend – 28/10 ochtend",
+  "headline": "Brotli nu actief misbruikt.",
+  "headline_em": "Update vandaag.",
+  "summary": "CISA zette op 27/10 de Brotli-decoderfout en een Magento-lek op de lijst van actief misbruikte kwetsbaarheden. Draait u Node.js of .NET, update dan vandaag. WordPress-sites met YOOtheme Pro worden actief aangevallen.",
+  "stats": { "critical": 6, "exploited": 5, "fixes": 6 },
+  "groups": [
+    {
+      "id": "systeembeheer",
+      "label": "Systeembeheer",
+      "title": "Servers, firewalls",
+      "title_em": "& backup.",
+      "sub": "Voor wie servers, firewalls, back-ups of Linux-machines beheert.",
+      "items": [
+        {
+          "product": "Brotli-decoder (Node.js, .NET, PAN-OS)",
+          "cves": ["CVE-2026-111497"],
+          "score": "9.2",
+          "severity": "critical",
+          "exploited": true,
+          "status": "patch",
+          "what": "Een gemanipuleerde gecomprimeerde aanvraag kan zonder login het geheugen corrumperen en soms code laten uitvoeren. Sinds 27/10 staat het lek op de CISA KEV-lijst, en een eerste aanvalspoging op Node.js is vastgesteld.",
+          "steps": [
+            "Node.js → 22.23.4 / 24.22.1 / 26.12.1",
+            ".NET → 8.0.33 / 9.0.22 / 10.0.14",
+            "libbrotli → 1.0.10 / 1.1.1 / 1.2.1",
+            "Palo Alto PAN-OS 11.2 / 12.1 / 12.2: hotfix installeren",
+            "Daarna services herstarten en containers opnieuw bouwen"
+          ],
+          "sources": [
+            { "label": "SecurityOnline – KEV", "url": "https://securityonline.info/cisa-kev-magento-brotli-vulnerability/" },
+            { "label": "HOL – eerste aanval", "url": "https://hol.org/blog/cve-2026-111497-brotli-cisa-kev-node2shell-exploit" },
+            { "label": "SecurityOnline – PAN-OS", "url": "https://securityonline.info/pan-os-brotli-vulnerability-cve-2026-111497/" }
+          ]
+        },
+        {
+          "product": "Veeam Backup & Replication 13",
+          "cves": ["CVE-2026-108142"],
+          "score": "9.1",
+          "severity": "critical",
+          "exploited": false,
+          "status": "patch",
+          "what": "Een autorisatie-bypass zonder login in de CDP Coordinator Service. Misbruik is nog niet bekend, maar back-upservers zijn een favoriet doelwit van ransomware.",
+          "steps": [
+            "Updaten naar 13.1.2 (build 13.1.2.57) of 13.0.3 (build 13.0.3.63)",
+            "Veeam ONE → 13.1 P1",
+            "Veeam-poorten alleen bereikbaar vanaf het beheernetwerk"
+          ],
+          "sources": [
+            { "label": "SecurityOnline – Veeam", "url": "https://securityonline.info/veeam-vulnerabilities-backup-replication-veeam-one/" }
+          ]
+        },
+        {
+          "product": "WatchGuard Fireware OS",
+          "cves": ["CVE-2026-93866", "CVE-2026-93857", "CVE-2026-93865"],
+          "score": "9.1–9.5",
+          "severity": "critical",
+          "exploited": false,
+          "status": "patch",
+          "what": "Zeven kritieke lekken, onder meer in Access Portal, de SIP-proxy en FireCluster. Een deel ervan werkt zonder login.",
+          "steps": [
+            "Nieuwste build van je tak installeren (2026.4 / 12.12.4 / 12.5.22). De bronnen spreken elkaar tegen over de exacte build: check de WatchGuard PSIRT",
+            "Access Portal en SIP-proxy uitschakelen als je ze niet gebruikt"
+          ],
+          "sources": [
+            { "label": "SecurityOnline – WatchGuard", "url": "https://securityonline.info/watchguard-fireware-os-vulnerabilities-2/" }
+          ]
+        },
+        {
+          "product": "Supermicro BMC / IPMI",
+          "cves": ["CVE-2026-18450"],
+          "score": "9.8",
+          "severity": "critical",
+          "exploited": false,
+          "status": "patch",
+          "what": "Acht lekken in de beheerchip van 392 moederborden. Met het ergste kan iemand zonder login commando's uitvoeren.",
+          "steps": [
+            "BMC-firmware updaten (zie de Supermicro-advisory per bord)",
+            "BMC nooit op het internet of het gewone LAN",
+            "BMC-wachtwoorden wijzigen na de update"
+          ],
+          "sources": [
+            { "label": "SecurityOnline – Supermicro", "url": "https://securityonline.info/supermicro-bmc-vulnerabilities-ipmi/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algemeen",
+      "label": "Algemeen",
+      "title": "Voor",
+      "title_em": "iedereen.",
+      "sub": "Telefoons, tablets en apps die elke medewerker of zaakvoerder gebruikt.",
+      "items": [
+        {
+          "product": "iPhone & iPad",
+          "cves": ["CVE-2026-86950"],
+          "score": "8.8",
+          "severity": "high",
+          "exploited": true,
+          "status": "patch",
+          "what": "Een gemanipuleerd bestand kan code uitvoeren op je toestel. Apple meldt gerichte aanvallen. De fix is nu ook beschikbaar voor oudere toestellen.",
+          "steps": [
+            "Updaten naar iOS/iPadOS 27.2",
+            "Oudere toestellen (iPhone XS/XR, iPad 7e generatie): 18.7.11"
+          ],
+          "sources": [
+            { "label": "The Hacker News – Apple", "url": "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html" }
+          ]
+        },
+        {
+          "product": "Microsoft Authenticator (Android)",
+          "cves": ["CVE-2026-80097"],
+          "score": "8.6",
+          "severity": "high",
+          "exploited": false,
+          "status": "patch",
+          "what": "Een kwaadaardige app zonder rechten kon inlogtokens voor Microsoft 365 (mail, bestanden, agenda) buitmaken.",
+          "steps": [
+            "Authenticator updaten naar 6.2606.4246 of hoger",
+            "Beheerders: deze minimumversie afdwingen via Intune"
+          ],
+          "sources": [
+            { "label": "The Hacker News – Authenticator", "url": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cameras",
+      "label": "Camera's & toegang",
+      "title": "Camera's &",
+      "title_em": "toegangscontrole.",
+      "sub": "IP-camera's, recorders, badgelezers en deursystemen.",
+      "items": [
+        {
+          "product": "Dahua-camera's & -recorders",
+          "cves": ["CVE-2021-33044", "CVE-2021-33045"],
+          "score": "–",
+          "severity": "high",
+          "exploited": true,
+          "status": "mitigation",
+          "what": "Aanvallers kapen camera's via de P2P-clouddienst (Easy4IP), ook als die achter een router zitten. Ze gebruiken zwakke wachtwoorden of verouderde firmware en plaatsen een verborgen account.",
+          "steps": [
+            "P2P/Easy4IP uitschakelen als je het niet nodig hebt",
+            "Firmware updaten en sterke wachtwoorden instellen",
+            "Onbekend account (bv. p2pwn)? Dan is het toestel gecompromitteerd",
+            "Poort 37777 nooit openzetten naar het internet"
+          ],
+          "sources": [
+            { "label": "The Hacker News – Dahua", "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html" }
+          ]
+        }
+      ],
+      "empty_note": "Toegangscontrole: geen nieuwe kritieke meldingen."
+    },
+    {
+      "id": "websites",
+      "label": "Websites & webshops",
+      "title": "Websites &",
+      "title_em": "webshops.",
+      "sub": "WordPress, Joomla, Magento en PHP-hosting.",
+      "items": [
+        {
+          "product": "YOOtheme Pro (WordPress / Joomla)",
+          "cves": ["CVE-2026-102785"],
+          "score": "10.0",
+          "severity": "critical",
+          "exploited": true,
+          "status": "patch",
+          "what": "Zonder login kan een aanvaller een vermomd PHP-bestand op je site zetten. Er worden webshells geplaatst sinds 26/10.",
+          "steps": [
+            "Updaten naar YOOtheme Pro 5.0.53",
+            "In wp-content/uploads/ zoeken naar bestanden die met 'yt' beginnen en naar een map ALFA_DATA",
+            "Iets gevonden? Behandel de site als gehackt"
+          ],
+          "sources": [
+            { "label": "SecurityOnline – YOOtheme", "url": "https://securityonline.info/yootheme-pro-vulnerability-cve-2026-102785-exploited/" }
+          ]
+        },
+        {
+          "product": "Magento / Adobe Commerce",
+          "cves": ["CVE-2026-48356"],
+          "score": "9.3",
+          "severity": "critical",
+          "exploited": true,
+          "status": "patch",
+          "what": "Via een ongecontroleerde bestandsupload kan code uitgevoerd worden. Sinds 27/10 staat het lek op de CISA KEV-lijst.",
+          "steps": [
+            "Patch APSB26-73 (juli 2026) installeren",
+            "De checkout controleren op onbekende JavaScript"
+          ],
+          "sources": [
+            { "label": "SecurityOnline – KEV", "url": "https://securityonline.info/cisa-kev-magento-brotli-vulnerability/" },
+            { "label": "THN – 953 webshops", "url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html" }
+          ]
+        },
+        {
+          "product": "PHP (PHP2Shell)",
+          "cves": ["CVE-2026-109618", "CVE-2026-109619"],
+          "score": "9.2",
+          "severity": "critical",
+          "exploited": true,
+          "status": "patch",
+          "what": "Wordt nog steeds actief aangevallen. Volgens Censys draaien wereldwijd nog meer dan 32 miljoen kwetsbare PHP-diensten.",
+          "steps": [
+            "Minimaal PHP 8.2.35 / 8.3.36 / 8.4.27 / 8.5.12",
+            "PHP 8.1 of ouder: migreren"
+          ],
+          "sources": [
+            { "label": "The Hacker News – PHP2Shell", "url": "https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html" }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixed": [
+    { "product": "PAN-OS (Brotli)", "fix": "12.2.4-h1 · 12.1.4-h13 · 11.2.4-h23 e.v.", "url": "https://securityonline.info/pan-os-brotli-vulnerability-cve-2026-111497/" },
+    { "product": "Veeam B&R / ONE", "fix": "13.1.2 · 13.0.3 · ONE 13.1 P1", "url": "https://securityonline.info/veeam-vulnerabilities-backup-replication-veeam-one/" },
+    { "product": "WatchGuard Fireware", "fix": "2026.4 · 12.12.4 · 12.5.22", "url": "https://securityonline.info/watchguard-fireware-os-vulnerabilities-2/" },
+    { "product": "Apple iOS / iPadOS", "fix": "27.2 · 18.7.11", "url": "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html" },
+    { "product": "OpenMage Magento LTS", "fix": "34 fixes", "url": "https://securityonline.info/openmage-vulnerabilities-oauth-csrf/" },
+    { "product": "Mautic", "fix": "7.2.2", "url": "https://securityonline.info/mautic-vulnerabilities-rce-sqli-patched-7-2-2/" }
+  ]
+}

@@ -1,0 +1,171 @@
+/* ============== CVE-BRIEFING ==============
+   Bouwt verder op /styles.css (variabelen, .section, .section-tag, .btn, nav, footer).
+   Alleen klassen met prefix .cve- worden hier gedefinieerd. */
+
+:root {
+  --cve-crit: #D92D20;
+  --cve-high: #E8590C;
+  --cve-ok: #12A150;
+}
+
+/* Hero */
+.cve-hero { padding-top: calc(var(--pad-section) + 2rem); }
+.cve-hero .section-head { max-width: 860px; margin-bottom: 2.5rem; }
+.cve-meta {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem;
+  font-family: "JetBrains Mono", monospace; font-size: 0.78rem;
+  color: var(--muted); letter-spacing: 0.04em; margin-top: 1.4rem;
+}
+.cve-meta strong { color: var(--ink); font-weight: 500; }
+
+/* Kerncijfers */
+.cve-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line); border-left: 1px solid var(--line);
+  max-width: var(--content-max); margin-inline: auto;
+}
+.cve-stat {
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 1.6rem 2rem; position: relative; background: var(--white);
+}
+.cve-stat::before { content: ""; position: absolute; top: -1px; left: 0; right: 0; height: 3px; background: var(--muted); }
+.cve-stat--crit::before { background: var(--cve-crit); }
+.cve-stat--expl::before { background: var(--ink); }
+.cve-stat--ok::before { background: var(--cve-ok); }
+.cve-stat-num {
+  font-family: "Big Shoulders Display", serif; font-weight: 900;
+  font-size: clamp(3rem, 6vw, 4.6rem); line-height: 0.9; color: var(--ink);
+}
+.cve-stat--crit .cve-stat-num { color: var(--cve-crit); }
+.cve-stat--ok .cve-stat-num { color: var(--cve-ok); }
+.cve-stat-label {
+  font-family: "JetBrains Mono", monospace; font-size: 0.74rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.6rem;
+}
+
+/* Snelnavigatie per groep */
+.cve-jump { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; max-width: var(--content-max); margin-inline: auto; }
+.cve-jump a {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 1rem; border: 1px solid var(--line-2); border-radius: 999px;
+  background: var(--white); font-size: 0.85rem; color: var(--ink-2);
+  transition: border-color .2s, color .2s;
+}
+.cve-jump a:hover { border-color: var(--accent); color: var(--accent); }
+.cve-jump .cve-count { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--muted); }
+
+/* Groep */
+.cve-group { padding-top: calc(var(--pad-section) * 0.7); padding-bottom: calc(var(--pad-section) * 0.5); }
+.cve-group:nth-of-type(even) { background: var(--paper-2); }
+.cve-group .section-head { margin-bottom: 2.5rem; }
+.cve-empty {
+  max-width: var(--content-max); margin: 1.2rem auto 0;
+  font-family: "JetBrains Mono", monospace; font-size: 0.8rem; color: var(--muted);
+}
+
+/* Kaarten */
+.cve-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line); border-left: 1px solid var(--line);
+  max-width: var(--content-max); margin-inline: auto;
+}
+.cve-card {
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  background: var(--white); padding: 2rem; position: relative;
+  display: flex; flex-direction: column; gap: 0.9rem;
+}
+.cve-card::before { content: ""; position: absolute; top: -1px; left: 0; width: 100%; height: 3px; background: var(--muted); }
+.cve-card--critical::before { background: var(--cve-crit); }
+.cve-card--high::before { background: var(--cve-high); }
+.cve-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.cve-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.cve-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.3rem 0.6rem; border-radius: 999px; border: 1px solid currentColor;
+}
+.cve-badge--critical { color: var(--cve-crit); }
+.cve-badge--high { color: var(--cve-high); }
+.cve-badge--ok { color: var(--cve-ok); }
+.cve-badge--warn { color: var(--muted); }
+.cve-badge--expl { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.cve-badge--expl::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--cve-crit); box-shadow: 0 0 0 3px rgba(217, 45, 32, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+.cve-score { text-align: right; flex-shrink: 0; }
+.cve-score-num { font-family: "Big Shoulders Display", serif; font-weight: 900; font-size: 2.4rem; line-height: 0.9; }
+.cve-card--critical .cve-score-num { color: var(--cve-crit); }
+.cve-card--high .cve-score-num { color: var(--cve-high); }
+.cve-score-label { font-family: "JetBrains Mono", monospace; font-size: 0.62rem; letter-spacing: 0.14em; color: var(--muted); }
+.cve-title {
+  font-family: "Big Shoulders Display", serif; font-size: 1.9rem; font-weight: 800;
+  line-height: 1; text-transform: uppercase; letter-spacing: -0.01em; margin-top: 0.4rem;
+}
+.cve-ids { display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; font-family: "JetBrains Mono", monospace; font-size: 0.78rem; }
+.cve-ids a { color: var(--accent); border-bottom: 1px dashed transparent; }
+.cve-ids a:hover { border-bottom-color: var(--accent); }
+.cve-what { font-size: 0.98rem; line-height: 1.55; color: var(--ink-2); }
+.cve-steps { display: grid; gap: 0.45rem; margin-top: 0.2rem; }
+.cve-steps li { display: flex; gap: 0.6rem; font-size: 0.92rem; line-height: 1.45; color: var(--ink); }
+.cve-steps li::before { content: "→"; color: var(--accent); font-family: "JetBrains Mono", monospace; flex-shrink: 0; }
+.cve-sources {
+  margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--line-2);
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem;
+}
+.cve-sources a {
+  font-family: "JetBrains Mono", monospace; font-size: 0.75rem; letter-spacing: 0.03em;
+  color: var(--ink); display: inline-flex; gap: 0.35rem; align-items: center;
+}
+.cve-sources a span { color: var(--accent); transition: transform .25s; }
+.cve-sources a:hover span { transform: translate(2px, -2px); }
+
+/* Oneven laatste kaart vult de volle breedte */
+.cve-grid > .cve-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.cve-group .section-title, .cve-hero .section-title { overflow-wrap: anywhere; hyphens: auto; }
+.cve-hero .section-tag { flex-wrap: wrap; }
+
+/* Opgelost */
+.cve-fixed { background: var(--ink); color: var(--paper); }
+.cve-fixed .section-title { color: var(--paper); }
+.cve-fixed .section-sub { color: rgba(247, 243, 233, 0.7); }
+.cve-fixed-list { max-width: var(--content-max); margin-inline: auto; border-top: 1px solid rgba(247, 243, 233, 0.15); }
+.cve-fixed-row {
+  display: grid; grid-template-columns: 1.2fr 1.6fr auto; gap: 1rem; align-items: center;
+  padding: 1.1rem 0; border-bottom: 1px solid rgba(247, 243, 233, 0.15);
+}
+.cve-fixed-prod { font-weight: 600; display: flex; gap: 0.6rem; align-items: center; }
+.cve-fixed-prod::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cve-ok); flex-shrink: 0; }
+.cve-fixed-ver { font-family: "JetBrains Mono", monospace; font-size: 0.82rem; color: rgba(247, 243, 233, 0.8); }
+.cve-fixed-row a { font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: var(--paper); }
+.cve-fixed-row a span { color: var(--accent); }
+
+/* Archief */
+.cve-archive-list { display: flex; flex-wrap: wrap; gap: 0.6rem; max-width: var(--content-max); margin-inline: auto; }
+.cve-archive-list a {
+  font-family: "JetBrains Mono", monospace; font-size: 0.8rem;
+  padding: 0.5rem 0.9rem; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--white);
+}
+.cve-archive-list a:hover, .cve-archive-list a[aria-current="page"] { border-color: var(--accent); color: var(--accent); }
+
+/* Disclaimer */
+.cve-disclaimer {
+  max-width: var(--content-max); margin: 0 auto; padding: 1.4rem var(--pad-x);
+  font-size: 0.82rem; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .cve-grid { grid-template-columns: 1fr; }
+  .cve-fixed-row { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+@media (max-width: 640px) {
+  .cve-stats { grid-template-columns: 1fr; }
+  .cve-stat { padding: 1.2rem 1.4rem; display: flex; align-items: baseline; gap: 1rem; }
+  .cve-stat-num { font-size: 2.8rem; }
+  .cve-stat-label { margin-top: 0; }
+  .cve-card { padding: 1.5rem 1.2rem; }
+  .cve-title { font-size: 1.6rem; }
+  .cve-group .section-title, .cve-hero .section-title { font-size: 2.1rem; }
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CVE-briefing 28/10/2026 – 6 kritiek, 5 actief misbruikt | IT-Mike</title>
+<meta name="description" content="CISA zette op 27/10 de Brotli-decoderfout en een Magento-lek op de lijst van actief misbruikte kwetsbaarheden. Draait u Node.js of .NET, update dan vandaag. WordPress-sites met YOOtheme Pro worden actief aangevallen."/>
+<meta name="author" content="Mike Jonckheere — IT-Mike"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://it-mike.be/cve/"/>
+<link rel="icon" type="image/png" href="/media/Favicon.png"/>
+<link rel="apple-touch-icon" href="/media/Favicon.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://it-mike.be/cve/"/>
+<meta property="og:title" content="CVE-briefing 28/10/2026 – 6 kritiek, 5 actief misbruikt | IT-Mike"/>
+<meta property="og:description" content="CISA zette op 27/10 de Brotli-decoderfout en een Magento-lek op de lijst van actief misbruikte kwetsbaarheden. Draait u Node.js of .NET, update dan vandaag. WordPress-sites met YOOtheme Pro worden actief aangevallen."/>
+<meta property="og:locale" content="nl_BE"/>
+<meta property="og:image" content="https://it-mike.be/media/Logo with slogan.png"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "CVE-briefing 28/10/2026", "datePublished": "2026-10-28", "dateModified": "2026-10-28", "inLanguage": "nl-BE", "description": "CISA zette op 27/10 de Brotli-decoderfout en een Magento-lek op de lijst van actief misbruikte kwetsbaarheden. Draait u Node.js of .NET, update dan vandaag. WordPress-sites met YOOtheme Pro worden actief aangevallen.", "author": {"@type": "Person", "name": "Mike Jonckheere"}, "publisher": {"@type": "LocalBusiness", "name": "IT-Mike", "url": "https://it-mike.be"}, "mainEntityOfPage": "https://it-mike.be/cve/"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Cinzel:wght@500;700;900&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="stylesheet" href="/cve/cve.css"/>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Sluit menu">×</button>
+  <a href="/#diensten" class="mobile-link"><span>01</span>Diensten</a>
+  <a href="/#werkwijze" class="mobile-link"><span>02</span>Werkwijze</a>
+  <a href="/#over" class="mobile-link"><span>03</span>Over Mike</a>
+  <a href="#contact" class="mobile-link"><span>04</span>Contact</a>
+  <a href="tel:+32496797671" class="mobile-call">04 96 79 76 71</a>
+</div>
+
+<nav id="navbar" class="nav scrolled">
+  <a href="/" class="nav-brand" aria-label="IT-Mike home">
+    <img src="/media/Dog mark.png" alt="" class="nav-dog"/>
+    <span class="nav-name">MIKE JONCKHEERE</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#diensten"><span class="nav-num">01</span>Diensten</a></li>
+    <li><a href="/#werkwijze"><span class="nav-num">02</span>Werkwijze</a></li>
+    <li><a href="/#over"><span class="nav-num">03</span>Over Mike</a></li>
+    <li><a href="#contact"><span class="nav-num">04</span>Contact</a></li>
+  </ul>
+  <a href="tel:+32496797671" class="nav-cta"><span class="nav-cta-dot"></span>04 96 79 76 71</a>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<main>
+
+<section class="section cve-hero">
+  <div class="section-head">
+    <div class="section-tag"><span class="tag-num">§ SECURITY</span>CVE-briefing · woensdag 28 oktober 2026</div>
+    <h1 class="section-title">Brotli nu actief misbruikt. <em>Update vandaag.</em></h1>
+    <p class="section-sub">CISA zette op 27/10 de Brotli-decoderfout en een Magento-lek op de lijst van actief misbruikte kwetsbaarheden. Draait u Node.js of .NET, update dan vandaag. WordPress-sites met YOOtheme Pro worden actief aangevallen.</p>
+    <div class="cve-meta"><span>Periode <strong>27/10 ochtend – 28/10 ochtend</strong></span><span>Bijgewerkt <strong>28/10/2026</strong></span><a href="#archief">Archief →</a></div>
+  </div>
+  <div class="cve-stats">
+    <div class="cve-stat cve-stat--crit"><div class="cve-stat-num">6</div><div class="cve-stat-label">Kritiek</div></div>
+    <div class="cve-stat cve-stat--expl"><div class="cve-stat-num">5</div><div class="cve-stat-label">Actief misbruikt</div></div>
+    <div class="cve-stat cve-stat--ok"><div class="cve-stat-num">6</div><div class="cve-stat-label">Nieuwe fixes</div></div>
+  </div>
+  <nav class="cve-jump" aria-label="Spring naar groep"><a href="#systeembeheer">Systeembeheer <span class="cve-count">4</span></a><a href="#algemeen">Algemeen <span class="cve-count">2</span></a><a href="#cameras">Camera&#x27;s &amp; toegang <span class="cve-count">1</span></a><a href="#websites">Websites &amp; webshops <span class="cve-count">3</span></a></nav>
+</section>
+
+<section class="section cve-group reveal" id="systeembeheer">
+  <div class="section-head">
+    <div class="section-tag"><span class="tag-num">§ 01</span>Systeembeheer</div>
+    <h2 class="section-title">Servers, firewalls <em>&amp; backup.</em></h2>
+    <p class="section-sub">Voor wie servers, firewalls, back-ups of Linux-machines beheert.</p>
+  </div>
+  <div class="cve-grid">
+    <article class="cve-card cve-card--critical">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--expl">Actief misbruikt</span><span class="cve-badge cve-badge--critical">Kritiek</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">9.2</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">Brotli-decoder (Node.js, .NET, PAN-OS)</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111497" target="_blank" rel="noopener">CVE-2026-111497</a></div>
+      <p class="cve-what">Een gemanipuleerde gecomprimeerde aanvraag kan zonder login het geheugen corrumperen en soms code laten uitvoeren. Sinds 27/10 staat het lek op de CISA KEV-lijst, en een eerste aanvalspoging op Node.js is vastgesteld.</p>
+      <ul class="cve-steps"><li>Node.js → 22.23.4 / 24.22.1 / 26.12.1</li><li>.NET → 8.0.33 / 9.0.22 / 10.0.14</li><li>libbrotli → 1.0.10 / 1.1.1 / 1.2.1</li><li>Palo Alto PAN-OS 11.2 / 12.1 / 12.2: hotfix installeren</li><li>Daarna services herstarten en containers opnieuw bouwen</li></ul>
+      <div class="cve-sources"><a href="https://securityonline.info/cisa-kev-magento-brotli-vulnerability/" target="_blank" rel="noopener">SecurityOnline – KEV <span aria-hidden="true">↗</span></a><a href="https://hol.org/blog/cve-2026-111497-brotli-cisa-kev-node2shell-exploit" target="_blank" rel="noopener">HOL – eerste aanval <span aria-hidden="true">↗</span></a><a href="https://securityonline.info/pan-os-brotli-vulnerability-cve-2026-111497/" target="_blank" rel="noopener">SecurityOnline – PAN-OS <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="cve-card cve-card--critical">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--critical">Kritiek</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">9.1</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">Veeam Backup &amp; Replication 13</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-108142" target="_blank" rel="noopener">CVE-2026-108142</a></div>
+      <p class="cve-what">Een autorisatie-bypass zonder login in de CDP Coordinator Service. Misbruik is nog niet bekend, maar back-upservers zijn een favoriet doelwit van ransomware.</p>
+      <ul class="cve-steps"><li>Updaten naar 13.1.2 (build 13.1.2.57) of 13.0.3 (build 13.0.3.63)</li><li>Veeam ONE → 13.1 P1</li><li>Veeam-poorten alleen bereikbaar vanaf het beheernetwerk</li></ul>
+      <div class="cve-sources"><a href="https://securityonline.info/veeam-vulnerabilities-backup-replication-veeam-one/" target="_blank" rel="noopener">SecurityOnline – Veeam <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="cve-card cve-card--critical">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--critical">Kritiek</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">9.1–9.5</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">WatchGuard Fireware OS</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93866" target="_blank" rel="noopener">CVE-2026-93866</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93857" target="_blank" rel="noopener">CVE-2026-93857</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93865" target="_blank" rel="noopener">CVE-2026-93865</a></div>
+      <p class="cve-what">Zeven kritieke lekken, onder meer in Access Portal, de SIP-proxy en FireCluster. Een deel ervan werkt zonder login.</p>
+      <ul class="cve-steps"><li>Nieuwste build van je tak installeren (2026.4 / 12.12.4 / 12.5.22). De bronnen spreken elkaar tegen over de exacte build: check de WatchGuard PSIRT</li><li>Access Portal en SIP-proxy uitschakelen als je ze niet gebruikt</li></ul>
+      <div class="cve-sources"><a href="https://securityonline.info/watchguard-fireware-os-vulnerabilities-2/" target="_blank" rel="noopener">SecurityOnline – WatchGuard <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="cve-card cve-card--critical">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--critical">Kritiek</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">9.8</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">Supermicro BMC / IPMI</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-18450" target="_blank" rel="noopener">CVE-2026-18450</a></div>
+      <p class="cve-what">Acht lekken in de beheerchip van 392 moederborden. Met het ergste kan iemand zonder login commando&#x27;s uitvoeren.</p>
+      <ul class="cve-steps"><li>BMC-firmware updaten (zie de Supermicro-advisory per bord)</li><li>BMC nooit op het internet of het gewone LAN</li><li>BMC-wachtwoorden wijzigen na de update</li></ul>
+      <div class="cve-sources"><a href="https://securityonline.info/supermicro-bmc-vulnerabilities-ipmi/" target="_blank" rel="noopener">SecurityOnline – Supermicro <span aria-hidden="true">↗</span></a></div>
+    </article></div>
+  
+</section>
+<section class="section cve-group reveal" id="algemeen">
+  <div class="section-head">
+    <div class="section-tag"><span class="tag-num">§ 02</span>Algemeen</div>
+    <h2 class="section-title">Voor <em>iedereen.</em></h2>
+    <p class="section-sub">Telefoons, tablets en apps die elke medewerker of zaakvoerder gebruikt.</p>
+  </div>
+  <div class="cve-grid">
+    <article class="cve-card cve-card--high">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--expl">Actief misbruikt</span><span class="cve-badge cve-badge--high">Hoog</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">8.8</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">iPhone &amp; iPad</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86950" target="_blank" rel="noopener">CVE-2026-86950</a></div>
+      <p class="cve-what">Een gemanipuleerd bestand kan code uitvoeren op je toestel. Apple meldt gerichte aanvallen. De fix is nu ook beschikbaar voor oudere toestellen.</p>
+      <ul class="cve-steps"><li>Updaten naar iOS/iPadOS 27.2</li><li>Oudere toestellen (iPhone XS/XR, iPad 7e generatie): 18.7.11</li></ul>
+      <div class="cve-sources"><a href="https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html" target="_blank" rel="noopener">The Hacker News – Apple <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="cve-card cve-card--high">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--high">Hoog</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">8.6</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">Microsoft Authenticator (Android)</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-80097" target="_blank" rel="noopener">CVE-2026-80097</a></div>
+      <p class="cve-what">Een kwaadaardige app zonder rechten kon inlogtokens voor Microsoft 365 (mail, bestanden, agenda) buitmaken.</p>
+      <ul class="cve-steps"><li>Authenticator updaten naar 6.2606.4246 of hoger</li><li>Beheerders: deze minimumversie afdwingen via Intune</li></ul>
+      <div class="cve-sources"><a href="https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html" target="_blank" rel="noopener">The Hacker News – Authenticator <span aria-hidden="true">↗</span></a></div>
+    </article></div>
+  
+</section>
+<section class="section cve-group reveal" id="cameras">
+  <div class="section-head">
+    <div class="section-tag"><span class="tag-num">§ 03</span>Camera&#x27;s &amp; toegang</div>
+    <h2 class="section-title">Camera&#x27;s &amp; <em>toegangscontrole.</em></h2>
+    <p class="section-sub">IP-camera&#x27;s, recorders, badgelezers en deursystemen.</p>
+  </div>
+  <div class="cve-grid">
+    <article class="cve-card cve-card--high">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--expl">Actief misbruikt</span><span class="cve-badge cve-badge--high">Hoog</span><span class="cve-badge cve-badge--warn">Workaround</span></div>
+        
+      </div>
+      <h3 class="cve-title">Dahua-camera&#x27;s &amp; -recorders</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33044" target="_blank" rel="noopener">CVE-2021-33044</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33045" target="_blank" rel="noopener">CVE-2021-33045</a></div>
+      <p class="cve-what">Aanvallers kapen camera&#x27;s via de P2P-clouddienst (Easy4IP), ook als die achter een router zitten. Ze gebruiken zwakke wachtwoorden of verouderde firmware en plaatsen een verborgen account.</p>
+      <ul class="cve-steps"><li>P2P/Easy4IP uitschakelen als je het niet nodig hebt</li><li>Firmware updaten en sterke wachtwoorden instellen</li><li>Onbekend account (bv. p2pwn)? Dan is het toestel gecompromitteerd</li><li>Poort 37777 nooit openzetten naar het internet</li></ul>
+      <div class="cve-sources"><a href="https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html" target="_blank" rel="noopener">The Hacker News – Dahua <span aria-hidden="true">↗</span></a></div>
+    </article></div>
+  <p class="cve-empty">Toegangscontrole: geen nieuwe kritieke meldingen.</p>
+</section>
+<section class="section cve-group reveal" id="websites">
+  <div class="section-head">
+    <div class="section-tag"><span class="tag-num">§ 04</span>Websites &amp; webshops</div>
+    <h2 class="section-title">Websites &amp; <em>webshops.</em></h2>
+    <p class="section-sub">WordPress, Joomla, Magento en PHP-hosting.</p>
+  </div>
+  <div class="cve-grid">
+    <article class="cve-card cve-card--critical">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--expl">Actief misbruikt</span><span class="cve-badge cve-badge--critical">Kritiek</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">10.0</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">YOOtheme Pro (WordPress / Joomla)</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102785" target="_blank" rel="noopener">CVE-2026-102785</a></div>
+      <p class="cve-what">Zonder login kan een aanvaller een vermomd PHP-bestand op je site zetten. Er worden webshells geplaatst sinds 26/10.</p>
+      <ul class="cve-steps"><li>Updaten naar YOOtheme Pro 5.0.53</li><li>In wp-content/uploads/ zoeken naar bestanden die met &#x27;yt&#x27; beginnen en naar een map ALFA_DATA</li><li>Iets gevonden? Behandel de site als gehackt</li></ul>
+      <div class="cve-sources"><a href="https://securityonline.info/yootheme-pro-vulnerability-cve-2026-102785-exploited/" target="_blank" rel="noopener">SecurityOnline – YOOtheme <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="cve-card cve-card--critical">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--expl">Actief misbruikt</span><span class="cve-badge cve-badge--critical">Kritiek</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">9.3</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">Magento / Adobe Commerce</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48356" target="_blank" rel="noopener">CVE-2026-48356</a></div>
+      <p class="cve-what">Via een ongecontroleerde bestandsupload kan code uitgevoerd worden. Sinds 27/10 staat het lek op de CISA KEV-lijst.</p>
+      <ul class="cve-steps"><li>Patch APSB26-73 (juli 2026) installeren</li><li>De checkout controleren op onbekende JavaScript</li></ul>
+      <div class="cve-sources"><a href="https://securityonline.info/cisa-kev-magento-brotli-vulnerability/" target="_blank" rel="noopener">SecurityOnline – KEV <span aria-hidden="true">↗</span></a><a href="https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html" target="_blank" rel="noopener">THN – 953 webshops <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="cve-card cve-card--critical">
+      <div class="cve-card-head">
+        <div class="cve-badges"><span class="cve-badge cve-badge--expl">Actief misbruikt</span><span class="cve-badge cve-badge--critical">Kritiek</span><span class="cve-badge cve-badge--ok">Patch beschikbaar</span></div>
+        <div class="cve-score"><div class="cve-score-num">9.2</div><div class="cve-score-label">CVSS</div></div>
+      </div>
+      <h3 class="cve-title">PHP (PHP2Shell)</h3>
+      <div class="cve-ids"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618" target="_blank" rel="noopener">CVE-2026-109618</a><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109619" target="_blank" rel="noopener">CVE-2026-109619</a></div>
+      <p class="cve-what">Wordt nog steeds actief aangevallen. Volgens Censys draaien wereldwijd nog meer dan 32 miljoen kwetsbare PHP-diensten.</p>
+      <ul class="cve-steps"><li>Minimaal PHP 8.2.35 / 8.3.36 / 8.4.27 / 8.5.12</li><li>PHP 8.1 of ouder: migreren</li></ul>
+      <div class="cve-sources"><a href="https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html" target="_blank" rel="noopener">The Hacker News – PHP2Shell <span aria-hidden="true">↗</span></a></div>
+    </article></div>
+  
+</section>
+
+<section class="section cve-fixed reveal" id="opgelost">
+  <div class="section-head">
+    <div class="section-tag"><span class="tag-num">§ FIX</span>Opgelost</div>
+    <h2 class="section-title">Nieuwe <em>patches.</em></h2>
+    <p class="section-sub">Updates die sinds de vorige briefing verschenen.</p>
+  </div>
+  <div class="cve-fixed-list">
+    <div class="cve-fixed-row">
+      <span class="cve-fixed-prod">PAN-OS (Brotli)</span>
+      <span class="cve-fixed-ver">12.2.4-h1 · 12.1.4-h13 · 11.2.4-h23 e.v.</span>
+      <a href="https://securityonline.info/pan-os-brotli-vulnerability-cve-2026-111497/" target="_blank" rel="noopener">Bron <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="cve-fixed-row">
+      <span class="cve-fixed-prod">Veeam B&amp;R / ONE</span>
+      <span class="cve-fixed-ver">13.1.2 · 13.0.3 · ONE 13.1 P1</span>
+      <a href="https://securityonline.info/veeam-vulnerabilities-backup-replication-veeam-one/" target="_blank" rel="noopener">Bron <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="cve-fixed-row">
+      <span class="cve-fixed-prod">WatchGuard Fireware</span>
+      <span class="cve-fixed-ver">2026.4 · 12.12.4 · 12.5.22</span>
+      <a href="https://securityonline.info/watchguard-fireware-os-vulnerabilities-2/" target="_blank" rel="noopener">Bron <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="cve-fixed-row">
+      <span class="cve-fixed-prod">Apple iOS / iPadOS</span>
+      <span class="cve-fixed-ver">27.2 · 18.7.11</span>
+      <a href="https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html" target="_blank" rel="noopener">Bron <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="cve-fixed-row">
+      <span class="cve-fixed-prod">OpenMage Magento LTS</span>
+      <span class="cve-fixed-ver">34 fixes</span>
+      <a href="https://securityonline.info/openmage-vulnerabilities-oauth-csrf/" target="_blank" rel="noopener">Bron <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="cve-fixed-row">
+      <span class="cve-fixed-prod">Mautic</span>
+      <span class="cve-fixed-ver">7.2.2</span>
+      <a href="https://securityonline.info/mautic-vulnerabilities-rce-sqli-patched-7-2-2/" target="_blank" rel="noopener">Bron <span aria-hidden="true">↗</span></a>
+    </div></div>
+</section>
+
+<section class="section reveal" id="archief">
+  <div class="section-head">
+    <div class="section-tag"><span class="tag-num">§ ARCHIEF</span>Vorige briefings</div>
+    <h2 class="section-title">Eerder <em>gemeld.</em></h2>
+  </div>
+  <div class="cve-archive-list"><a href="/cve/2026-10-28/" aria-current="page">28/10/2026</a></div>
+</section>
+
+<section class="section wb-contact reveal" id="contact">
+  <div class="section-head">
+    <div class="section-tag"><span class="tag-num">§ CONTACT</span>Hulp nodig?</div>
+    <h2 class="section-title">Geen tijd om <em>te patchen?</em></h2>
+    <p class="section-sub">Ik volg dit dagelijks op voor kmo's en lokale besturen in West-Vlaanderen. Bel of mail, dan bekijken we samen wat er bij u moet gebeuren.</p>
+  </div>
+  <div class="wb-contact-actions">
+    <a href="tel:+32496797671" class="btn btn-primary">04 96 79 76 71 <span class="btn-arrow">→</span></a>
+    <a href="mailto:mike@it-mike.be?subject=CVE-briefing%2028/10/2026" class="btn btn-ghost">mike@it-mike.be</a>
+  </div>
+</section>
+
+<p class="cve-disclaimer">Deze briefing wordt automatisch samengesteld uit publieke bronnen (CCB, CISA, NVD, advisories van leveranciers en vakpers), met een link naar elke bron. Ze is informatief en zonder garantie: controleer versienummers en stappen altijd bij de leverancier voordat u updates uitrolt.</p>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-row">
+    <div class="footer-brand">
+      <img src="/media/Dog mark.png" alt="IT-Mike" class="footer-dog"/>
+      <span class="footer-name">MIKE JONCKHEERE</span>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 IT-Mike — Mike Jonckheere — Ardooie</span>
+      <span class="footer-sep">·</span>
+      <a href="https://mjon.be">→ MJON.be</a>
+    </div>
+  </div>
+  <div class="footer-areas">
+    <span>Actief in:</span>
+    <a href="/ardooie/">Ardooie</a> ·
+    <a href="/lichtervelde/">Lichtervelde</a> ·
+    <a href="/pittem/">Pittem</a> ·
+    <a href="/izegem/">Izegem</a> ·
+    <a href="/roeselare/">Roeselare</a>
+    <span>· en de ruime regio</span>
+  </div>
+  <div class="footer-bar">
+    <address class="footer-address">
+      <strong>IT-Mike</strong> · Mike Jonckheere · Ardooie, 8850 West-Vlaanderen · België ·
+      <a href="tel:+32496797671">+32 496 79 76 71</a> ·
+      <a href="mailto:mike@it-mike.be">mike@it-mike.be</a>
+    </address>
+    <span>🔒 Geen cookies · GDPR-conform via Cloudflare Web Analytics · BTW BE0780.671.242</span>
+  </div>
+</footer>
+
+<script>
+var mobileMenu = document.getElementById('mobileMenu');
+document.getElementById('navBurger').addEventListener('click', function() { mobileMenu.classList.add('open'); });
+document.getElementById('mobileClose').addEventListener('click', function() { mobileMenu.classList.remove('open'); });
+document.querySelectorAll('.mobile-link').forEach(function(l) { l.addEventListener('click', function() { mobileMenu.classList.remove('open'); }); });
+if ('IntersectionObserver' in window) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(en) { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+} else {
+  document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
+}
+</script>
+</body>
+</html>
