@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-29",
+  "period": "28/10 ochtend – 29/10 ochtend",
+  "headline": "VMware en Linux nu actief misbruikt.",
+  "headline_em": "WordPress: twee kritieke plugins.",
+  "summary": "CISA zette op 28/10 een VMware ESX-lek en een Linux-kernellek op de lijst van actief misbruikte kwetsbaarheden. Gebruikt u JupiterX Core of Pie Register Premium op uw WordPress-site, update dan vandaag. Voor een kritiek lek in de opstartfirmware van servers (netwerkboot) is er nog geen patch.",
+  "stats": {
+    "critical": 4,
+    "exploited": 2,
+    "fixes": 2
+  },
+  "groups": [
+    {
+      "id": "systeembeheer",
+      "label": "Systeembeheer",
+      "title": "Servers, firewalls",
+      "title_em": "& backup.",
+      "sub": "Voor wie servers, virtualisatie, Linux-machines of bedrijfssoftware beheert.",
+      "items": [
+        {
+          "product": "VMware ESX / ESXi",
+          "cves": [
+            "CVE-2026-41709"
+          ],
+          "score": "2.7",
+          "severity": "medium",
+          "exploited": true,
+          "status": "patch",
+          "what": "Wie al beheerder is op de host, kan sommige acties uitvoeren zonder dat ze in de logs komen. De score is laag, maar een spionagegroep gebruikte dit begin 2026 om zijn sporen te wissen, en sinds 28/10 staat het lek op de CISA KEV-lijst. De patch bestaat al sinds juli.",
+          "steps": [
+            "ESX 8.0 → ESXi80U3j-25429389 of nieuwer",
+            "ESX 9.x → ESXi-9.1.0.0-25370933 of ESXi-9.0.2.0100-25595025",
+            "Cloud Foundation 5.2 → 5.2.4",
+            "Er is geen workaround: controleer de exacte build in Broadcom-advisory VMSA-2026-0006"
+          ],
+          "sources": [
+            {
+              "label": "CISA – KEV 28/10",
+              "url": "https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+            },
+            {
+              "label": "The Hacker News – VMware",
+              "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html"
+            }
+          ]
+        },
+        {
+          "product": "Linux-kernel (Fragnesia)",
+          "cves": [
+            "CVE-2026-46300"
+          ],
+          "score": "7.8",
+          "severity": "high",
+          "exploited": true,
+          "status": "patch",
+          "what": "Een gewone gebruiker of een binnengedrongen webapplicatie kan root worden op de server. Sinds 28/10 staat het lek op de CISA KEV-lijst. Volgens een onderzoeksrapport werd het samen met PHP2Shell gebruikt om servers over te nemen.",
+          "steps": [
+            "Kernel-update van je distributie installeren (Debian, Ubuntu, Red Hat, SUSE, AlmaLinux, Amazon Linux) en herstarten",
+            "Kernels van vóór 13 mei 2026 zijn kwetsbaar",
+            "Nog niet kunnen updaten? Tijdelijk de modules esp4, esp6 en rxrpc uitschakelen (breekt IPsec-VPN op die machine)",
+            "PHP ook bijwerken: zie PHP2Shell in de briefing van 28/10"
+          ],
+          "sources": [
+            {
+              "label": "CISA – KEV 28/10",
+              "url": "https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+            },
+            {
+              "label": "SOC Prime – Fragnesia",
+              "url": "https://socprime.com/blog/cve-2026-46300-fragnesia-linux-kernel-flaw/"
+            },
+            {
+              "label": "THN – PHP2Shell-aanval",
+              "url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html"
+            }
+          ]
+        },
+        {
+          "product": "Oracle E-Business Suite",
+          "cves": [
+            "CVE-2026-101767"
+          ],
+          "score": "9.8",
+          "severity": "critical",
+          "exploited": false,
+          "status": "patch",
+          "what": "Zonder login kan een aanvaller via een SQL-injectie code laten uitvoeren op de server. Op 27/10 zagen onderzoekers de eerste aanvalspogingen op hun lokservers. Een geslaagde aanval is nog niet gemeld.",
+          "steps": [
+            "Oracle Critical Patch Update van oktober 2026 installeren",
+            "Kan dat niet meteen? /OA_HTML/AppsTCFServer uit de URL-allowlist van de firewall halen",
+            "De EBS-webserver alleen bereikbaar maken vanaf vertrouwde netwerken"
+          ],
+          "sources": [
+            {
+              "label": "The Hacker News – Oracle EBS",
+              "url": "https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html"
+            }
+          ]
+        },
+        {
+          "product": "UEFI-firmware (EDK II, netwerkboot)",
+          "cves": [
+            "CVE-2026-97631"
+          ],
+          "score": "9.5",
+          "severity": "critical",
+          "exploited": false,
+          "status": "nopatch",
+          "what": "Wie in hetzelfde netwerk zit, kan een server die via het netwerk opstart (PXE) laten crashen en in theorie code laten uitvoeren nog vóór Secure Boot. Een fix bestaat in de broncode, maar firmware-updates van de fabrikanten zijn er nog niet. Misbruik is niet bekend.",
+          "steps": [
+            "PXE-/netwerkboot uitschakelen in de BIOS/UEFI als je het niet gebruikt",
+            "Netwerkboot alleen toelaten in een apart, afgeschermd netwerk",
+            "Firmware-updates van je serverfabrikant opvolgen; nog niet alle fabrikanten hebben gereageerd"
+          ],
+          "sources": [
+            {
+              "label": "The Hacker News – UEFI",
+              "url": "https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algemeen",
+      "label": "Algemeen",
+      "title": "Voor",
+      "title_em": "iedereen.",
+      "sub": "Telefoons, tablets en apps die elke medewerker of zaakvoerder gebruikt.",
+      "items": [],
+      "empty_note": "Geen nieuwe kritieke meldingen voor telefoons, browsers of kantoorapps. Heeft u de iPhone- en Authenticator-updates van gisteren nog niet geïnstalleerd? Doe dat dan nu."
+    },
+    {
+      "id": "cameras",
+      "label": "Camera's & toegang",
+      "title": "Camera's &",
+      "title_em": "toegangscontrole.",
+      "sub": "IP-camera's, recorders, badgelezers en deursystemen.",
+      "items": [],
+      "empty_note": "Camera's en toegangscontrole: geen nieuwe kritieke meldingen. De Dahua-aanvallen van gisteren lopen nog."
+    },
+    {
+      "id": "websites",
+      "label": "Websites & webshops",
+      "title": "Websites &",
+      "title_em": "webshops.",
+      "sub": "WordPress, Joomla, Magento en PHP-hosting.",
+      "items": [
+        {
+          "product": "JupiterX Core (WordPress)",
+          "cves": [
+            "CVE-2026-106013"
+          ],
+          "score": "9.8",
+          "severity": "critical",
+          "exploited": false,
+          "status": "patch",
+          "what": "Een aanvaller kan zonder wachtwoord inloggen als een andere gebruiker, ook als beheerder. Misbruik is nog niet gemeld, maar Patchstack verwacht dat snel.",
+          "steps": [
+            "JupiterX Core updaten naar 4.62.0 of nieuwer",
+            "Controleren of er onbekende beheerdersaccounts zijn bijgekomen"
+          ],
+          "sources": [
+            {
+              "label": "Patchstack – JupiterX Core",
+              "url": "https://patchstack.com/database/wordpress/plugin/jupiterx-core/vulnerability/wordpress-jupiter-x-core-plugin-4-61-0-unauthenticated-authentication-bypass-vulnerability"
+            }
+          ]
+        },
+        {
+          "product": "Pie Register Premium (WordPress)",
+          "cves": [
+            "CVE-2026-84999"
+          ],
+          "score": "9.8",
+          "severity": "critical",
+          "exploited": false,
+          "status": "patch",
+          "what": "Zonder login kan een aanvaller een PHP-bestand op je site zetten en zo de site overnemen. Patchstack meldt actief misbruik, maar andere bronnen niet en wij konden het niet bevestigen bij CISA. Behandel het daarom als dringend.",
+          "steps": [
+            "Pie Register Premium updaten naar 3.8.4.1 of nieuwer",
+            "In wp-content/uploads/ zoeken naar onbekende .php-bestanden",
+            "Iets gevonden? Behandel de site als gehackt"
+          ],
+          "sources": [
+            {
+              "label": "Patchstack – Pie Register",
+              "url": "https://patchstack.com/database/wordpress/plugin/pie-register-premium/vulnerability/wordpress-pie-register-premium-plugin-3-8-4-0-unauthenticated-arbitrary-file-upload-vulnerability"
+            },
+            {
+              "label": "SecurityOnline – CVE Watchtower",
+              "url": "https://securityonline.info/cve-watchtower/cve-2026-84999/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixed": [
+    {
+      "product": "JupiterX Core",
+      "fix": "4.62.0",
+      "url": "https://patchstack.com/database/wordpress/plugin/jupiterx-core/vulnerability/wordpress-jupiter-x-core-plugin-4-61-0-unauthenticated-authentication-bypass-vulnerability"
+    },
+    {
+      "product": "Pie Register Premium",
+      "fix": "3.8.4.1",
+      "url": "https://patchstack.com/database/wordpress/plugin/pie-register-premium/vulnerability/wordpress-pie-register-premium-plugin-3-8-4-0-unauthenticated-arbitrary-file-upload-vulnerability"
+    }
+  ]
+}
